@@ -22,8 +22,9 @@
         
         .header {
             background: 
-                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('logo.png') center/cover no-repeat;
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('logo.png') center/contain no-repeat;
+            background-size: cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -41,6 +42,7 @@
             letter-spacing: 3px;
             margin-bottom: 20px;
             font-weight: normal;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
         }
         
         .header p {
@@ -48,16 +50,18 @@
             max-width: 700px;
             margin: 0 auto;
             font-style: italic;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
         }
         
         .content-section {
             padding: 80px 20px;
             max-width: 900px;
             margin: 0 auto;
+            background: rgba(0,0,0,0.8);
         }
         
         .about {
-            background: rgba(30,30,30,0.8);
             padding: 40px;
             border-left: 4px solid var(--secondary);
             margin-top: 40px;
@@ -82,7 +86,7 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Section with Full Logo -->
     <header class="header">
         <h1>Welcome to NLM Music Group Africa</h1>
         <p>Elevating African musical talent through visionary artistry and strategic development</p>
@@ -94,7 +98,6 @@
             <h2>About Our Legacy</h2>
             <p><span class="highlight">NLM Music Group Africa</span> is an independent Record Label from Africa established in 2025 by <span class="highlight">Ailwei Maduna Wa Malada</span>.</p>
             <p>The name <span class="highlight">NLM</span> carries the spirit of its founder's mother, <span class="highlight">Ntampose Lettia Maduna</span> - a tribute to her enduring legacy and love for music.</p>
-            <p>We are committed to discovering and nurturing exceptional African talent, creating music that resonates across continents while staying true to our roots.</p>
         </div>
     </main>
 </body>
