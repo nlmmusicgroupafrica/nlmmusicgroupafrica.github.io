@@ -14,123 +14,88 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', serif;
             background-color: var(--primary);
             color: white;
+            line-height: 1.6;
         }
         
-        .hero {
+        .header {
             background: 
-                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                 url('logo.png') center/cover no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 20px;
+            align-items: center;
             text-align: center;
+            padding: 0 20px;
+            border-bottom: 3px solid var(--secondary);
         }
         
-        h1 {
-            font-size: 4rem;
+        .header h1 {
+            font-size: 3.5rem;
             color: var(--secondary);
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             margin-bottom: 20px;
+            font-weight: normal;
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 60px 20px;
-            max-width: 1200px;
+        .header p {
+            font-size: 1.3rem;
+            max-width: 700px;
             margin: 0 auto;
+            font-style: italic;
         }
         
-        .service-card {
-            background: rgba(30,30,30,0.8);
-            border-top: 3px solid var(--secondary);
-            padding: 30px;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card h3 {
-            color: var(--secondary);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .content-section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .about {
-            background: 
-                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                url('logo.png') center/cover no-repeat;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .about-content {
-            background: rgba(0,0,0,0.8);
-            max-width: 800px;
-            margin: 0 auto;
+            background: rgba(30,30,30,0.8);
             padding: 40px;
-            border: 1px solid var(--secondary);
+            border-left: 4px solid var(--secondary);
+            margin-top: 40px;
         }
         
         .about h2 {
             color: var(--secondary);
             font-size: 2rem;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: var(--secondary);
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>NLM MUSIC GROUP AFRICA</h1>
-        <p>Business planning, Strategy and execution for African musical talent</p>
-    </section>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to NLM Music Group Africa</h1>
+        <p>Elevating African musical talent through visionary artistry and strategic development</p>
+    </header>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="service-card">
-            <h3>ARTIST DEVELOPMENT</h3>
-            <p>Comprehensive artist development programs to nurture and grow musical talent across Africa.</p>
+    <!-- Main Content -->
+    <main class="content-section">
+        <div class="about">
+            <h2>About Our Legacy</h2>
+            <p><span class="highlight">NLM Music Group Africa</span> is an independent Record Label from Africa established in 2025 by <span class="highlight">Ailwei Maduna Wa Malada</span>.</p>
+            <p>The name <span class="highlight">NLM</span> carries the spirit of its founder's mother, <span class="highlight">Ntampose Lettia Maduna</span> - a tribute to her enduring legacy and love for music.</p>
+            <p>We are committed to discovering and nurturing exceptional African talent, creating music that resonates across continents while staying true to our roots.</p>
         </div>
-        
-        <div class="service-card">
-            <h3>MUSIC DISTRIBUTION</h3>
-            <p>Global digital and physical distribution networks to get your music heard worldwide.</p>
-        </div>
-        
-        <div class="service-card">
-            <h3>LABEL SERVICES</h3>
-            <p>Full-service record label support including production, marketing, and promotion.</p>
-        </div>
-        
-        <div class="service-card">
-            <h3>BRAND PARTNERSHIPS</h3>
-            <p>Strategic collaborations between artists and brands for mutual growth.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="about-content">
-            <h2>ABOUT NLM</h2>
-            <p>NLM Music Group Africa is an independent Record Label from Africa established in 2025 by Ailwei Maduna Wa Malada.</p>
-            <p>The name NLM carries the spirit of its founder's mother, Ntampose Lettia Maduna - a tribute to her enduring legacy.</p>
-        </div>
-    </section>
+    </main>
 </body>
 </html>
