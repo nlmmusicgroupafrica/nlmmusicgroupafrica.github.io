@@ -1,127 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLM Music Group Africa</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #000000;
-            --secondary: #FFD700;
-            --accent: #E50914;
-        }
-        
-        /* Logo Background */
-        .logo-bg {
+        body {
+            margin: 0;
+            padding: 0;
             background: 
-                linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                url('logo.png') center/contain no-repeat;
-            background-blend-mode: overlay;
-            min-height: 100vh;
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('logo.png') center/cover no-repeat fixed;
+            height: 100vh;
             display: flex;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            color: gold;
+            font-family: 'Arial', sans-serif;
         }
-        
-        /* Moderna-style Navigation */
-        .navbar {
-            background-color: var(--primary) !important;
-            padding: 15px 0;
+        .content {
+            background: rgba(0,0,0,0.8);
+            padding: 3rem;
+            max-width: 800px;
+            border: 2px solid gold;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255,215,0,0.3);
         }
-        
-        .navbar-brand {
-            color: var(--secondary) !important;
-            font-weight: 700;
-            font-size: 1.8rem;
-        }
-        
-        .nav-link {
-            color: white !important;
-            font-weight: 500;
-            margin: 0 10px;
+        h1 {
+            font-size: 4rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            letter-spacing: 5px;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
-        
-        /* Hero Section */
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 20px;
+        .about {
+            background: rgba(20,20,20,0.9);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-left: 4px solid gold;
+        }
+        .about h2 {
+            color: gold;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
         }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
-        
-        /* About Section */
-        .about-box {
-            background: rgba(30, 30, 30, 0.8);
-            padding: 30px;
-            border-top: 3px solid var(--secondary);
+        .highlight {
+            color: gold;
+            font-weight: bold;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">NLM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Music</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="content">
+        <h1>NLM Music Group Africa</h1>
+        
+        <div class="about">
+            <h2>Our Legacy</h2>
+            <p>
+                Born from the heartbeat of Africa, <span class="highlight">NLM Music Group Africa</span> is more than a record label - it's a movement. Established in 2025 by visionary founder <span class="highlight">Ailwei Maduna Wa Malada</span>, we carry the torch of authentic African sound into the global spotlight.
+            </p>
+            <p>
+                The name <span class="highlight">NLM</span> pulses with profound meaning, honoring Ailwei's mother, <span class="highlight">Ntampose Lettia Maduna</span> - a woman whose strength echoed through the hills of her homeland and whose wisdom flows through every artist we nurture.
+            </p>
+            <p>
+                From Johannesburg to Lagos, Accra to Nairobi, we discover raw talent and transform it into timeless artistry. This isn't just music - it's the soul of Africa amplified for the world.
+            </p>
         </div>
-    </nav>
-
-    <!-- Hero Section with Logo Background -->
-    <section class="logo-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="hero-title">NLM Music Group Africa</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-5 bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto about-box">
-                    <h2 class="text-center mb-4" style="color: var(--secondary);">About</h2>
-                    <p class="text-center">
-                        NLM Music Group Africa is an independent Record Label from Africa established in 2025 by Ailwei Maduna Wa Malada. NLM is named after her mother Ntampose Lettia Maduna.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 </html>
