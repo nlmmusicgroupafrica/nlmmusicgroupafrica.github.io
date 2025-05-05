@@ -14,17 +14,15 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Times New Roman', serif;
+            font-family: 'Arial', sans-serif;
             background-color: var(--primary);
             color: white;
-            line-height: 1.6;
         }
         
-        .header {
+        .hero {
             background: 
-                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('logo.png') center/contain no-repeat;
-            background-size: cover;
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('logo.png') center/cover no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -32,51 +30,66 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            border-bottom: 3px solid var(--secondary);
         }
         
-        .header h1 {
-            font-size: 3.5rem;
+        .logo-title {
+            font-size: 5rem;
+            font-weight: 900;
             color: var(--secondary);
+            letter-spacing: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 20px;
-            font-weight: normal;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+            margin-bottom: 40px;
         }
         
-        .header p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto;
-            font-style: italic;
-            background: rgba(0,0,0,0.7);
-            padding: 10px 20px;
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
         }
         
-        .content-section {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(0,0,0,0.8);
-        }
-        
-        .about {
-            padding: 40px;
-            border-left: 4px solid var(--secondary);
-            margin-top: 40px;
-        }
-        
-        .about h2 {
-            color: var(--secondary);
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .cta-button {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary);
+            padding: 15px 40px;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
         }
         
-        .about p {
-            margin-bottom: 15px;
+        .cta-button:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .about-section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-title {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         .highlight {
@@ -86,19 +99,23 @@
     </style>
 </head>
 <body>
-    <!-- Header Section with Full Logo -->
-    <header class="header">
-        <h1>Welcome to NLM Music Group Africa</h1>
-        <p>Elevating African musical talent through visionary artistry and strategic development</p>
-    </header>
-
-    <!-- Main Content -->
-    <main class="content-section">
-        <div class="about">
-            <h2>About Our Legacy</h2>
-            <p><span class="highlight">NLM Music Group Africa</span> is an independent Record Label from Africa established in 2025 by <span class="highlight">Ailwei Maduna Wa Malada</span>.</p>
-            <p>The name <span class="highlight">NLM</span> carries the spirit of its founder's mother, <span class="highlight">Ntampose Lettia Maduna</span> - a tribute to her enduring legacy and love for music.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="logo-title">NLM</h1>
+        <p class="tagline">MUSIC GROUP AFRICA</p>
+        <div class="cta-buttons">
+            <button class="cta-button">Discover Artists</button>
+            <button class="cta-button">Our Releases</button>
         </div>
-    </main>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2 class="about-title">Our Story</h2>
+        <div class="about-content">
+            <p><span class="highlight">NLM Music Group Africa</span> is an independent Record Label from Africa established in 2025 by <span class="highlight">Ailwei Maduna Wa Malada</span>.</p>
+            <p>The name <span class="highlight">NLM</span> honors the founder's mother, <span class="highlight">Ntampose Lettia Maduna</span>, whose legacy inspires our mission to elevate African music worldwide.</p>
+        </div>
+    </section>
 </body>
 </html>
