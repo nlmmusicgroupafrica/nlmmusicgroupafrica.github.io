@@ -5,63 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>NLM Music Group Africa</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="logo">🎶 NLM Music Group Africa</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#podcasts">Podcasts</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">🎶 NLM Music Group Africa</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#labels">Labels</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>The Home of African Underground Music</h1>
-        <p>Founded in 2025 by Ailwei Maduna Wa Malada in honor of his mother, Ntampose Lettia Maduna.</p>
-        <a href="#about" class="btn">Explore</a>
+        <div class="hero-content">
+            <h1>NLM Music Group Africa</h1>
+            <p>Founded in 2025 by Ailwei Maduna Wa Malada in honor of his mother, Ntampose Lettia Maduna.</p>
+        </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container">
+    <!-- Labels Grid -->
+    <section class="labels-section" id="labels">
+        <div class="container">
+            <h2 class="section-title">Our Label</h2>
+            <div class="label-grid">
+                <!-- Label Card -->
+                <div class="label-card">
+                    <img src="logo.png" alt="NLM Music Group Africa Logo" class="label-logo">
+                    <h3>NLM Music Group Africa</h3>
+                    <p>We are dedicated to discovering and developing authentic African underground talent. At NLM, we don’t just make music — we create legacies rooted in culture, rhythm, and soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <h2>About NLM</h2>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
             <p><strong>NLM Music Group Africa</strong> was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>, whose love for music inspired this journey.</p>
             <p>We are dedicated to discovering and developing authentic African underground talent. At NLM, we don’t just make music — we create legacies rooted in culture, rhythm, and soul.</p>
-        </section>
+        </div>
+    </section>
 
-        <!-- Music Releases -->
-        <section id="music" class="content-section">
-            <h2>Music Releases</h2>
-            <p>🎤 Coming soon — fresh drops from the heart of African underground sound.</p>
-        </section>
-
-        <!-- Podcasts -->
-        <section id="podcasts" class="content-section">
-            <h2>Podcasts</h2>
-            <p>🎙️ Coming soon: Interviews, behind-the-scenes, and stories from the underground.</p>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="content-section">
-            <h2>Contact Us</h2>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
             <p>Email us at: <a href="mailto:officialnlmmusicgroupafrica@gmail.com">officialnlmmusicgroupafrica@gmail.com</a></p>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 NLM Music Group Africa. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 NLM Music Group Africa. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
