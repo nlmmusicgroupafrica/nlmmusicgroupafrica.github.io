@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Space Mono', monospace;
-    background: #0e0e0e;
+    background-color: #0e0e0e;
     color: #f1f1f1;
     line-height: 1.6;
     background-image: url('logo.png');
@@ -90,6 +90,7 @@ body {
 .btn:hover {
     background: #00ffff;
     color: #000;
+    transform: scale(1.05);
 }
 
 /* Container */
@@ -106,11 +107,12 @@ body {
     border-left: 4px solid #00ffff;
     border-radius: 5px;
     backdrop-filter: blur(5px);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content-section:hover {
-    transform: translateX(5px);
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .content-section h2 {
@@ -129,6 +131,11 @@ body {
 .content-section a {
     color: #00ffff;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.content-section a:hover {
+    color: #0ff;
 }
 
 /* Footer */
