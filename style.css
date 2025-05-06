@@ -7,11 +7,10 @@
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
-    background: url('logo.png') no-repeat center center/cover;
-    color: #fff;
+    font-family: 'Inter', sans-serif;
+    background: url('logo.png') no-repeat center center/cover fixed;
+    color: #f9f9f9;
     line-height: 1.7;
-    background-attachment: fixed;
 }
 
 /* Navbar */
@@ -27,9 +26,9 @@ body {
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #ff416c;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .nav-links {
@@ -39,13 +38,13 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff416c;
+    color: #fff;
 }
 
 /* Hero */
@@ -53,6 +52,7 @@ body {
     text-align: center;
     padding: 8rem 2rem 6rem;
     background: rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero h1 {
@@ -70,56 +70,75 @@ body {
 }
 
 .btn {
-    background: #ff416c;
-    color: white;
-    padding: 0.8rem 1.6rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.7rem 1.5rem;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e03a5f;
-    transform: scale(1.05);
+    background: #fff;
+    color: #000;
 }
 
-/* Content Grid */
-.content-grid {
+/* Grid Container */
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 3rem 5%;
     background: rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1.5s ease-out;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.1);
+/* Grid Items */
+.grid-item {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid transparent;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
-.card h2 {
-    color: #ff416c;
+.grid-item h2 {
+    color: #ffffff;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
 }
 
-.card p {
-    color: #eee;
+.grid-item p {
+    color: #ccc;
     font-size: 1rem;
 }
 
-.card a {
-    color: #ff416c;
-    font-weight: bold;
+.grid-item a {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer */
@@ -129,5 +148,4 @@ footer {
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 65, 108, 0.1);
 }
