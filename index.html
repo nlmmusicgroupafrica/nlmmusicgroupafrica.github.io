@@ -1,121 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>NLM Music Group Africa</title>
-    <style>
-        :root {
-            --primary: #000000;
-            --secondary: #FFD700;
-            --accent: #E50914;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .hero {
-            background: 
-                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('logo.png') center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        
-        .logo-title {
-            font-size: 5rem;
-            font-weight: 900;
-            color: var(--secondary);
-            letter-spacing: 10px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .tagline {
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .cta-button {
-            background: transparent;
-            color: white;
-            border: 2px solid var(--secondary);
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-        
-        .about-section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .about-title {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin-bottom: 30px;
-        }
-        
-        .about-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .highlight {
-            color: var(--secondary);
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="NLM Music Group Africa Logo" width="40">
+            <span>NLM Music Group Africa</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
-        <h1 class="logo-title">NLM</h1>
-        <p class="tagline">MUSIC GROUP AFRICA</p>
-        <div class="cta-buttons">
-            <button class="cta-button">Discover Artists</button>
-            <button class="cta-button">Our Releases</button>
-        </div>
+        <h1>Where Culture Meets Sound</h1>
+        <p>Founded in 2025 by Ailwei Maduna Wa Malada in honor of his late mother, Ntampose Lettia Maduna.</p>
+        <a href="#artists" class="btn">Explore Artists</a>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
-        <h2 class="about-title">Our Story</h2>
-        <div class="about-content">
-            <p><span class="highlight">NLM Music Group Africa</span> is an independent Record Label from Africa established in 2025 by <span class="highlight">Ailwei Maduna Wa Malada</span>.</p>
-            <p>The name <span class="highlight">NLM</span> honors the founder's mother, <span class="highlight">Ntampose Lettia Maduna</span>, whose legacy inspires our mission to elevate African music worldwide.</p>
+    <section id="about" class="section">
+        <h2>About NLM</h2>
+        <p><strong>NLM Music Group Africa</strong> was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his late mother, <strong>Ntampose Lettia Maduna</strong>, whose love for music inspired this journey.</p>
+        <p>We are dedicated to discovering and developing authentic African talent across genres like Afrobeat, Amapiano, Highlife, and more. At NLM, we don’t just make music — we create legacies rooted in culture, rhythm, and soul.</p>
+    </section>
+
+    <!-- Artists Section -->
+    <section id="artists" class="section">
+        <h2>Our Artists</h2>
+        <div class="artist-grid">
+            <div class="artist-card">
+                <h3>Kwame Beats</h3>
+                <p>Afrofusion Artist from Ghana</p>
+            </div>
+            <div class="artist-card">
+                <h3>Zinhle Soul</h3>
+                <p>Amapiano Queen from South Africa</p>
+            </div>
+            <div class="artist-card">
+                <h3>Maliq D'Vibe</h3>
+                <p>Highlife Producer & Singer</p>
+            </div>
         </div>
     </section>
+
+    <!-- Music Section -->
+    <section id="music" class="section">
+        <h2>Latest Releases</h2>
+        <p>🎧 Coming soon: Latest tracks and albums</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email us at: <a href="mailto:info@nlmmusicgroup.com">info@nlmmusicgroup.com</a></p>
+        <p>Follow us on social media:</p>
+        <div class="socials">
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 NLM Music Group Africa. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
