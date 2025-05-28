@@ -1,1 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SonicVerse Records</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      padding: 1rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff4ecd, #6c5ce7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff4ecd;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      background: linear-gradient(to bottom, #1e1e2f, #0a0a0a);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 0 0.5rem;
+    }
+
+    .btn-primary {
+      background: #ff4ecd;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #ec46b8;
+    }
+
+    .btn-outline {
+      border: 2px solid #ff4ecd;
+      color: #ff4ecd;
+    }
+
+    .btn-outline:hover {
+      background: #ff4ecd;
+      color: #fff;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 3rem 0 2rem;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Artist Card */
+    .card {
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body p {
+      color: #888;
+    }
+
+    /* Event List */
+    .event {
+      background: #111;
+      padding: 1rem;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .event:hover {
+      background: #1a1a1a;
+    }
+
+    .event-info h3 {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .event-info p {
+      color: #aaa;
+    }
+
+    .event-date {
+      text-align: right;
+    }
+
+    .event-date a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #ff4ecd;
+      text-decoration: underline;
+    }
+
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: white;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #222;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">SonicVerse</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#releases">Releases</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Where Sound Meets Vision.</h1>
+    <p>Discover groundbreaking artists, immersive releases, and unforgettable live experiences curated by SonicVerse Records.</p>
+    <div>
+      <a href="#artists" class="btn btn-primary">Explore Artists</a>
+      <a href="#events" class="btn btn-outline">View Upcoming Events</a>
+    </div>
+  </section>
+
+  <!-- Artists Section -->
+  <section id="artists">
+    <h2 class="section-title">Featured Artists</h2>
+    <div class="container grid">
+      <div class="card">
+        <img src="https://placehold.co/400x400?text=Neon+Waves " alt="Artist Image">
+        <div class="card-body">
+          <h3>The Neon Waves</h3>
+          <p>Electronic</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/400x400?text=Velvet+Mirage " alt="Artist Image">
+        <div class="card-body">
+          <h3>Velvet Mirage</h3>
+          <p>Indie Rock</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/400x400?text=Solar+Drift " alt="Artist Image">
+        <div class="card-body">
+          <h3>Solar Drift</h3>
+          <p>Synthwave</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Releases Section -->
+  <section id="releases">
+    <h2 class="section-title">Latest Releases</h2>
+    <div class="container grid">
+      <div class="card">
+        <img src="https://placehold.co/300x300?text=Echoes+in+Static " alt="Album Cover">
+        <div class="card-body">
+          <h3>Echoes in Static</h3>
+          <p>The Neon Waves</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x300?text=Dreams+Beneath+Neon " alt="Album Cover">
+        <div class="card-body">
+          <h3>Dreams Beneath Neon Lights</h3>
+          <p>Velvet Mirage</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x300?text=Retrograde " alt="Album Cover">
+        <div class="card-body">
+          <h3>Retrograde</h3>
+          <p>Solar Drift</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="container">
+      <div class="event">
+        <div class="event-info">
+          <h3>Festival of Lights</h3>
+          <p>Los Angeles, CA</p>
+        </div>
+        <div class="event-date">
+          <p>July 20, 2025</p>
+          <a href="#!">Get Tickets</a>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-info">
+          <h3>Neon Nights Festival</h3>
+          <p>Berlin, Germany</p>
+        </div>
+        <div class="event-date">
+          <p>August 5, 2025</p>
+          <a href="#!">Get Tickets</a>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-info">
+          <h3>Summer Synth Bash</h3>
+          <p>Tokyo, Japan</p>
+        </div>
+        <div class="event-date">
+          <p>September 12, 2025</p>
+          <a href="#!">Get Tickets</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="container">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="your@email.com" required />
+        <textarea placeholder="Your message..." required></textarea>
+        <button type="submit" class="btn btn-primary w-full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 SonicVerse Records. All rights reserved.
+  </footer>
+
+</body>
+</html>
