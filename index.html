@@ -79,7 +79,7 @@
     }
 
     nav ul li a:hover {
-      color: #ff4ecd;
+      color: #FFC107;
     }
 
     /* Hero Section */
@@ -87,7 +87,7 @@
       padding-top: 8rem;
       padding-bottom: 6rem;
       text-align: center;
-      background: linear-gradient(to bottom, #1e1e2f, #0a0a0a);
+      background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
     }
 
     .hero h1 {
@@ -95,6 +95,7 @@
       font-weight: 900;
       line-height: 1.2;
       margin-bottom: 1rem;
+      color: #FFC107;
     }
 
     .hero p {
@@ -114,22 +115,22 @@
     }
 
     .btn-primary {
-      background: #ff4ecd;
-      color: #fff;
+      background: #FFC107;
+      color: #000;
     }
 
     .btn-primary:hover {
-      background: #ec46b8;
+      background: #e0b00c;
     }
 
     .btn-outline {
-      border: 2px solid #ff4ecd;
-      color: #ff4ecd;
+      border: 2px solid #FFC107;
+      color: #FFC107;
     }
 
     .btn-outline:hover {
-      background: #ff4ecd;
-      color: #fff;
+      background: #FFC107;
+      color: #000;
     }
 
     /* Section Title */
@@ -138,6 +139,7 @@
       font-size: 2rem;
       font-weight: bold;
       margin: 3rem 0 2rem;
+      color: #FFC107;
     }
 
     /* Grid Layout */
@@ -210,7 +212,7 @@
     .event-date a {
       display: inline-block;
       margin-top: 0.5rem;
-      color: #ff4ecd;
+      color: #FFC107;
       text-decoration: underline;
     }
 
@@ -289,6 +291,36 @@
     .about-card p {
       font-size: 0.85rem;
       color: #aaa;
+    }
+
+    /* Contact Section */
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      background: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-info strong {
+      color: #FFC107;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      color: #FFC107;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #fff;
     }
   </style>
 </head>
@@ -456,21 +488,21 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
-    <div class="container" style="max-width: 600px; margin: 0 auto;">
-      <p class="text-center text-gray-400 mb-6">
+    <div class="contact-info">
+      <p class="mb-4">
         Have questions or want to work with us? Reach out via email or phone.
       </p>
 
-      <ul class="space-y-3 mb-6 text-gray-300">
+      <ul class="space-y-2 text-left max-w-xs mx-auto">
         <li><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com">officialnlmmusicgroupafrica@gmail.com</a></li>
         <li><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/0813398293 ">0813398293</a></li>
       </ul>
 
-      <h3 class="text-xl font-bold mb-3 text-center">Follow Us</h3>
-      <div class="flex justify-center gap-4 text-sm">
-        <a href="https://www.youtube.com/ @nlmmusicgroup_africa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">YouTube</a>
-        <a href="https://www.facebook.com/NLM-Music-Group-Africa-Official " target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Facebook</a>
-        <a href="https://www.instagram.com/ @nlmmusicgroupafrica" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Instagram</a>
+      <h3 class="text-xl font-bold mt-6 mb-3">Follow Us</h3>
+      <div class="social-links">
+        <a href="https://www.youtube.com/ @nlmmusicgroup_africa" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/NLM-Music-Group-Africa-Official " target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/nlmmusicgroupafrica " target="_blank">Instagram</a>
       </div>
     </div>
   </section>
