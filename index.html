@@ -253,6 +253,43 @@
         gap: 1rem;
       }
     }
+
+    /* About Section */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .about-card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1 1 250px;
+      max-width: 250px;
+    }
+
+    .about-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 999px;
+      margin: 0 auto 1rem;
+    }
+
+    .about-card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -279,8 +316,10 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <h1>Where Sound Meets Vision.</h1>
-    <p>Discover groundbreaking artists, immersive releases, and unforgettable live experiences curated by NLM Music Group Africa.</p>
+    <h1>We Are NLM Family</h1>
+    <p class="text-lg text-gray-300 mb-6">
+      NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
+    </p>
     <div>
       <a href="#artists" class="btn btn-primary">Explore Artists</a>
       <a href="#events" class="btn btn-outline">View Upcoming Events</a>
@@ -289,24 +328,34 @@
 
   <!-- About Section -->
   <section id="about" style="padding: 4rem 2rem;">
-    <div class="container" style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <div class="container" style="text-align: center; max-width: 1000px; margin: 0 auto;">
       <h2 class="section-title">About Us</h2>
       <p class="text-lg text-gray-300 mb-6">
         NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
       </p>
 
-      <!-- Founder -->
-      <div class="mb-8">
-        <h3 class="text-xl font-bold mb-2">Founder</h3>
-        <img src="founder.png" alt="Founder" class="mx-auto rounded-full w-32 h-32 object-cover mb-3">
-        <p class="text-sm text-gray-400">Ailwei Wa Malada</p>
-      </div>
+      <!-- About Cards -->
+      <div class="about-container">
+        <!-- Founder -->
+        <div class="about-card">
+          <img src="founder.png" alt="Founder" />
+          <h3>Founder</h3>
+          <p>Ailwei Maduna Wa Malada</p>
+        </div>
 
-      <!-- Head of Music (A&R) -->
-      <div>
-        <h3 class="text-xl font-bold mb-2">Head of Music (A&R)</h3>
-        <img src="ar.png" alt="Head of A&R" class="mx-auto rounded-full w-32 h-32 object-cover mb-3">
-        <p class="text-sm text-gray-400">TBA</p>
+        <!-- Head of Music (A&R) -->
+        <div class="about-card">
+          <img src="ar.png" alt="Head of A&R" />
+          <h3>Head of Music (A&R)</h3>
+          <p>Ailwei Maduna Wa Malada</p>
+        </div>
+
+        <!-- Head of NLM Shot It -->
+        <div class="about-card">
+          <img src="cameraman.png" alt="Head of Shot It" />
+          <h3>Head of NLM Shot It</h3>
+          <p>Ailwei Maduna Wa Malada</p>
+        </div>
       </div>
     </div>
   </section>
@@ -407,13 +456,22 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
-    <div class="container">
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="your@email.com" required />
-        <textarea placeholder="Your message..." required></textarea>
-        <button type="submit" class="btn btn-primary w-full">Send Message</button>
-      </form>
+    <div class="container" style="max-width: 600px; margin: 0 auto;">
+      <p class="text-center text-gray-400 mb-6">
+        Have questions or want to work with us? Reach out via email or phone.
+      </p>
+
+      <ul class="space-y-3 mb-6 text-gray-300">
+        <li><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com">officialnlmmusicgroupafrica@gmail.com</a></li>
+        <li><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/0813398293 ">0813398293</a></li>
+      </ul>
+
+      <h3 class="text-xl font-bold mb-3 text-center">Follow Us</h3>
+      <div class="flex justify-center gap-4 text-sm">
+        <a href="https://www.youtube.com/ @nlmmusicgroup_africa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">YouTube</a>
+        <a href="https://www.facebook.com/NLM-Music-Group-Africa-Official " target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Facebook</a>
+        <a href="https://www.instagram.com/ @nlmmusicgroupafrica" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Instagram</a>
+      </div>
     </div>
   </section>
 
