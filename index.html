@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SonicVerse Records</title>
+  <title>NLM Music Group Africa</title>
   <style>
     /* Reset & Base Styles */
     * {
@@ -55,11 +55,16 @@
     }
 
     .logo {
-      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.4rem;
       font-weight: bold;
-      background: linear-gradient(to right, #ff4ecd, #6c5ce7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    }
+
+    .logo img {
+      height: 32px;
+      width: auto;
     }
 
     nav ul {
@@ -255,10 +260,14 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">SonicVerse</div>
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="Logo" />
+        <span>NLM Music Group Africa</span>
+      </a>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#artists">Artists</a></li>
           <li><a href="#releases">Releases</a></li>
           <li><a href="#events">Events</a></li>
@@ -271,10 +280,21 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <h1>Where Sound Meets Vision.</h1>
-    <p>Discover groundbreaking artists, immersive releases, and unforgettable live experiences curated by SonicVerse Records.</p>
+    <p>Discover groundbreaking artists, immersive releases, and unforgettable live experiences curated by NLM Music Group Africa.</p>
     <div>
       <a href="#artists" class="btn btn-primary">Explore Artists</a>
       <a href="#events" class="btn btn-outline">View Upcoming Events</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 4rem 2rem; text-align: center;">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        NLM Music Group Africa is a modern record label dedicated to discovering and promoting African talent on the global stage.
+        We believe in music that moves people, tells stories, and breaks boundaries.
+      </p>
     </div>
   </section>
 
@@ -386,7 +406,7 @@
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 SonicVerse Records. All rights reserved.
+    &copy; 2025 NLM Music Group Africa. All rights reserved.
   </footer>
 
 </body>
