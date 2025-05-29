@@ -322,6 +322,21 @@
     .social-links a:hover {
       color: #fff;
     }
+
+    /* Spice for Artists */
+    .artist-bio {
+      font-size: 0.9rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .artist-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #FFC107, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
 </head>
 <body>
@@ -396,25 +411,35 @@
   <section id="artists">
     <h2 class="section-title">Featured Artists</h2>
     <div class="container grid">
+      <!-- Existing Artists -->
       <div class="card">
         <img src="https://placehold.co/400x400?text=Neon+Waves " alt="Artist Image">
         <div class="card-body">
-          <h3>The Neon Waves</h3>
-          <p>Electronic</p>
+          <h3 class="artist-name">The Neon Waves</h3>
+          <p class="artist-bio">Pushing boundaries in electronic sound design with futuristic beats and immersive sonic landscapes.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://placehold.co/400x400?text=Velvet+Mirage " alt="Artist Image">
         <div class="card-body">
-          <h3>Velvet Mirage</h3>
-          <p>Indie Rock</p>
+          <h3 class="artist-name">Velvet Mirage</h3>
+          <p class="artist-bio">Blends indie rock with ambient textures to create dreamlike musical experiences that linger in the soul.</p>
         </div>
       </div>
       <div class="card">
         <img src="https://placehold.co/400x400?text=Solar+Drift " alt="Artist Image">
         <div class="card-body">
-          <h3>Solar Drift</h3>
-          <p>Synthwave</p>
+          <h3 class="artist-name">Solar Drift</h3>
+          <p class="artist-bio">Revives the nostalgic vibes of synthwave with modern flair and cinematic storytelling.</p>
+        </div>
+      </div>
+
+      <!-- New Artist -->
+      <div class="card">
+        <img src="doski.png" alt="DoskiWaAfrica">
+        <div class="card-body">
+          <h3 class="artist-name">DoskiWaAfrica</h3>
+          <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
         </div>
       </div>
     </div>
