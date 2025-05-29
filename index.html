@@ -13,10 +13,11 @@
     }
 
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0a0a0a;
       color: white;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     a {
@@ -55,18 +56,21 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       font-size: 1.4rem;
       font-weight: bold;
     }
 
     nav ul {
       display: flex;
-      gap: 1.5rem;
-      text-transform: uppercase;
-      font-size: 0.9rem;
+      gap: 2rem;
     }
 
     nav ul li a {
+      text-transform: uppercase;
+      font-size: 0.9rem;
       transition: color 0.3s ease;
     }
 
@@ -74,19 +78,47 @@
       color: #FFC107;
     }
 
+    /* Hide all sections by default */
+    section[id] {
+      display: none;
+      padding: 4rem 2rem;
+    }
+
+    /* Show only the section matching the hash */
+    #home:target,
+    #about:target,
+    #artists:target,
+    #releases:target,
+    #events:target,
+    #contact:target {
+      display: block !important;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Show home by default if no hash is present */
+    #home:not(:target) {
+      display: block !important;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* Hero Section */
     .hero {
       padding-top: 8rem;
       padding-bottom: 6rem;
       text-align: center;
-      background-color: #000;
+      background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
     }
 
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
+      line-height: 1.2;
       margin-bottom: 1rem;
-      color: white;
+      color: #FFC107;
     }
 
     .hero p {
@@ -98,32 +130,30 @@
 
     .btn {
       display: inline-block;
-      padding: 0.75rem 2rem;
+      padding: 0.8rem 2rem;
       border-radius: 999px;
       font-weight: bold;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       transition: all 0.3s ease;
+      margin: 0 0.5rem;
     }
 
     .btn-primary {
-      background: white;
-      color: black;
+      background: #FFC107;
+      color: #000;
     }
 
     .btn-primary:hover {
-      background: #f0f0f0;
+      background: #e0b00c;
     }
 
     .btn-outline {
-      border: 2px solid white;
-      color: white;
+      border: 2px solid #FFC107;
+      color: #FFC107;
     }
 
     .btn-outline:hover {
-      background: white;
-      color: black;
+      background: #FFC107;
+      color: #000;
     }
 
     /* Section Title */
@@ -132,27 +162,19 @@
       font-size: 2rem;
       font-weight: bold;
       margin: 3rem 0 2rem;
-      color: white;
-    }
-
-    /* Grid Layout */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      color: #FFC107;
     }
 
     /* Artist Card */
     .card {
       background: #111;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s ease;
-      border: 1px solid #222;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
 
     .card img {
@@ -170,45 +192,7 @@
     }
 
     .card-body p {
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    /* Event List */
-    .event {
-      background: #111;
-      padding: 1rem;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .event:hover {
-      background: #1a1a1a;
-    }
-
-    .event-info h3 {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .event-info p {
-      color: #aaa;
-    }
-
-    .event-date {
-      text-align: right;
-    }
-
-    .event-date a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: white;
-      text-decoration: underline;
+      color: #888;
     }
 
     /* Contact Form */
@@ -226,7 +210,7 @@
       padding: 1rem;
       background: #111;
       border: 1px solid #333;
-      border-radius: 8px;
+      border-radius: 6px;
       color: white;
       resize: vertical;
     }
@@ -245,17 +229,6 @@
       margin-top: 4rem;
     }
 
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        text-align: center;
-      }
-    }
-
     /* About Section */
     .about-container {
       display: flex;
@@ -272,7 +245,6 @@
       text-align: center;
       flex: 1 1 250px;
       max-width: 250px;
-      border: 1px solid #222;
     }
 
     .about-card img {
@@ -300,12 +272,8 @@
       margin: 0 auto 2rem auto;
       background: #111;
       padding: 2rem;
-      border-radius: 12px;
+      border-radius: 10px;
       text-align: center;
-    }
-
-    .contact-info strong {
-      color: white;
     }
 
     .social-links {
@@ -315,13 +283,13 @@
     .social-links a {
       display: inline-block;
       margin: 0 0.5rem;
-      color: white;
+      color: #FFC107;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .social-links a:hover {
-      color: #FFC107;
+      color: #fff;
     }
 
     /* Spice for Artists */
@@ -334,77 +302,9 @@
     .artist-name {
       font-size: 1.2rem;
       font-weight: bold;
-      color: white;
-    }
-
-    /* Buttons like PodcastAndChill style */
-    .action-btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      margin: 1rem 0.5rem;
-      background: white;
-      color: black;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      transition: background 0.3s ease;
-    }
-
-    .action-btn:hover {
-      background: #f0f0f0;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    /* Brand Logos Section */
-    .brands {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .brands img {
-      height: 50px;
-      width: auto;
-      filter: grayscale(100%) brightness(0.9);
-      transition: filter 0.3s ease;
-    }
-
-    .brands img:hover {
-      filter: grayscale(0%);
-    }
-
-    /* Centered Text Block */
-    .center-text {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .center-text h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .center-text p {
-      color: #aaa;
-      font-size: 1rem;
-    }
-
-    /* Navigation Bar */
-    nav ul {
-      gap: 1.5rem;
+      background: linear-gradient(to right, #FFC107, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   </style>
 </head>
@@ -413,7 +313,9 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">NLM Music Group Africa</div>
+      <a href="#home" class="logo">
+        <span>NLM Music Group Africa</span>
+      </a>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -428,38 +330,42 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section id="home" class="hero">
     <h1>We Are NLM Family</h1>
-    <p>
+    <p class="text-lg text-gray-300 mb-6">
       NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
     </p>
-    <div class="actions">
-      <a href="#artists" class="action-btn">Explore Artist</a>
-      <a href="#events" class="action-btn">Photography & Videography</a>
+    <div>
+      <a href="#artists" class="btn btn-primary">Explore Artist</a>
+      <a href="#events" class="btn btn-outline">Photography & Videography</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" style="padding: 4rem 2rem;">
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
     <div class="container" style="text-align: center; max-width: 1000px; margin: 0 auto;">
-      <h2 class="section-title">About Us</h2>
-      <p style="color: #ccc; max-width: 700px; margin: 0 auto 2rem;">
+      <p class="text-lg text-gray-300 mb-6">
         NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
       </p>
 
+      <!-- About Cards -->
       <div class="about-container">
+        <!-- Founder -->
         <div class="about-card">
           <img src="founder.png" alt="Founder" />
           <h3>Founder</h3>
           <p>Ailwei Maduna Wa Malada</p>
         </div>
 
+        <!-- Head of Music (A&R) -->
         <div class="about-card">
           <img src="ar.png" alt="Head of A&R" />
           <h3>Head of Music (A&R)</h3>
           <p>Ailwei Maduna Wa Malada</p>
         </div>
 
+        <!-- Head of NLM Shot It -->
         <div class="about-card">
           <img src="cameraman.png" alt="Head of Shot It" />
           <h3>Head of NLM Shot It</h3>
@@ -485,52 +391,40 @@
 
   <!-- Releases Section -->
   <section id="releases">
-    <div class="center-text">
-      <h3>Music Releases</h3>
-      <p>To Be Announced Soon</p>
+    <h2 class="section-title">Music Releases</h2>
+    <div class="container" style="text-align: center; padding: 3rem 1rem;">
+      <p class="text-xl text-gray-300">To Be Announced Soon</p>
     </div>
   </section>
 
   <!-- Events Section -->
   <section id="events">
-    <div class="center-text">
-      <h3>NLM Shot It</h3>
-      <p>Photography & Videography</p>
-      <p style="margin-top: 1rem;">Content coming soon — stay tuned for visuals and media from NLM Shot It.</p>
+    <h2 class="section-title">NLM Shot It</h2>
+    <div class="container" style="text-align: center; padding: 3rem 1rem;">
+      <h3 class="text-xl font-bold mb-4">Photography & Videography</h3>
+      <p class="text-gray-300">Content coming soon — stay tuned for visuals and media from NLM Shot It.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="center-text">
-      <h3 class="section-title">Get In Touch</h3>
-      <p>Have questions or want to work with us? Reach out via email or phone.</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-info">
+      <p class="mb-4">
+        Have questions or want to work with us? Reach out via email or phone.
+      </p>
 
-      <ul style="margin-top: 1.5rem; text-align: center; list-style: none;">
+      <ul class="space-y-2 text-left max-w-xs mx-auto">
         <li><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com">officialnlmmusicgroupafrica@gmail.com</a></li>
         <li><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/0813398293 ">0813398293</a></li>
       </ul>
 
-      <h3 style="font-size: 1.25rem; font-weight: bold; margin: 2rem 0 1rem;">Follow Us</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Follow Us</h3>
       <div class="social-links">
         <a href="https://www.youtube.com/ @nlmmusicgroup_africa" target="_blank">YouTube</a>
         <a href="https://www.facebook.com/NLM-Music-Group-Africa-Official " target="_blank">Facebook</a>
         <a href="https://www.instagram.com/nlmmusicgroupafrica " target="_blank">Instagram</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Brands Section -->
-  <section class="center-text">
-    <h3>Africa's #1 Music Label</h3>
-    <p style="margin-top: 0.5rem;">We've Worked With</p>
-
-    <div class="brands" style="margin-top: 2rem;">
-      <img src="https://placehold.co/150x50?text=Partner+Logo+1 " alt="Partner Logo 1" />
-      <img src="https://placehold.co/150x50?text=Partner+Logo+2 " alt="Partner Logo 2" />
-      <img src="https://placehold.co/150x50?text=Partner+Logo+3 " alt="Partner Logo 3" />
-      <img src="https://placehold.co/150x50?text=Partner+Logo+4 " alt="Partner Logo 4" />
-      <img src="https://placehold.co/150x50?text=Partner+Logo+5 " alt="Partner Logo 5" />
     </div>
   </section>
 
