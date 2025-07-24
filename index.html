@@ -7,12 +7,13 @@
   <style>
     :root {
       --primary: #000000;
-      --secondary: #FF3D00;
+      --secondary: #FFD700; /* Gold */
       --text: #FFFFFF;
-      --light-text: #CCCCCC;
-      --bg: #111111;
-      --card-bg: #222222;
-      --highlight: #FF3D00;
+      --light-text: #BBBBBB;
+      --bg: #0A0A0A;
+      --card-bg: #1A1A1A;
+      --highlight: #FFD700;
+      --border: rgba(255,215,0,0.2);
     }
 
     * {
@@ -56,7 +57,7 @@
       background-color: var(--primary);
       z-index: 1000;
       padding: 15px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid var(--border);
     }
 
     .header-container {
@@ -73,6 +74,7 @@
       font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      color: var(--secondary);
     }
 
     .logo img {
@@ -101,7 +103,7 @@
     .hero {
       padding: 180px 0 100px;
       text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background-image.jpg');
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('background-image.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -112,6 +114,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2px;
+      color: var(--secondary);
     }
 
     .hero p {
@@ -134,27 +137,27 @@
 
     .btn-primary {
       background-color: var(--highlight);
-      color: var(--text);
+      color: var(--primary);
     }
 
     .btn-primary:hover {
-      background-color: #E03500;
+      background-color: #E6C300;
     }
 
     .btn-outline {
-      border: 2px solid var(--text);
-      color: var(--text);
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
     }
 
     .btn-outline:hover {
-      background-color: var(--text);
+      background-color: var(--secondary);
       color: var(--primary);
     }
 
     /* Sections */
     .section {
       padding: 100px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid var(--border);
     }
 
     .section-title {
@@ -164,6 +167,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2px;
+      color: var(--secondary);
     }
 
     /* About Section */
@@ -228,6 +232,12 @@
       font-weight: 700;
       margin-bottom: 10px;
       text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .artist-bio {
+      color: var(--light-text);
+      line-height: 1.7;
     }
 
     /* Releases Section */
@@ -256,6 +266,13 @@
       font-weight: 700;
       margin-bottom: 20px;
       text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .release-description {
+      color: var(--light-text);
+      margin-bottom: 20px;
+      line-height: 1.7;
     }
 
     .release-links {
@@ -302,6 +319,12 @@
     .footer-links a {
       color: var(--light-text);
       font-size: 0.9rem;
+    }
+
+    .email-link {
+      word-break: break-all;
+      color: var(--highlight);
+      font-weight: 600;
     }
 
     /* Responsive */
@@ -413,14 +436,14 @@
           <img src="doski.png" alt="DoskiWaAfrika" class="artist-image">
           <div class="artist-info">
             <h3 class="artist-name">DoskiWaAfrika</h3>
-            <p>An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa.</p>
+            <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
           </div>
         </div>
         <div class="artist-card">
           <img src="ar.png" alt="I'M MusiQ" class="artist-image">
           <div class="artist-info">
             <h3 class="artist-name">I'M MusiQ</h3>
-            <p>Fusing Amapiano with EDM, creating a genre-defying sound that ignites dancefloors worldwide.</p>
+            <p class="artist-bio">A groundbreaking producer and artist fusing the infectious rhythms of Amapiano with the high-energy pulse of EDM, creating a genre-defying sound that ignites dancefloors worldwide. His tracks blend deep basslines, hypnotic log drums, and euphoric synths, crafting an electrifying experience for fans of both African and electronic music.</p>
           </div>
         </div>
       </div>
@@ -434,11 +457,11 @@
         <img src="3.png" alt="Miloro Album" class="release-image">
         <div class="release-info">
           <h3 class="release-title">Miloro Album</h3>
-          <p>
-            Meaning "Dreams", is a bootleg blend of EDM flipped into Amapiano — a sound experiment from the mind of I'M MusiQ, the founder of NLM Music Group Africa.
+          <p class="release-description">
+            Miloro Album, meaning Dreams, is a bootleg blend of EDM flipped into Amapiano — a sound experiment from the mind of I'M MusiQ, the founder of NLM Music Group Africa. This project isn't about rules — it's about vibe. It's underground, unfiltered, and true to the dream of pushing sound beyond limits. A fusion of global energy and local soul.
           </p>
           <div class="release-links">
-            <a href="https://www.mediafire.com/file/hovanywsee8tgwt/I%2527M_MusiQ_-_Miloro_Album.zip/file" class="btn btn-primary">Download</a>
+            <a href="https://www.mediafire.com/file/hovanywsee8tgwt/I%2527M_MusiQ_-_Miloro_Album.zip/file" class="btn btn-primary">Download Album</a>
           </div>
         </div>
       </div>
@@ -446,16 +469,19 @@
         <img src="1.png" alt="The King Of Drum Tech Vol 01" class="release-image">
         <div class="release-info">
           <h3 class="release-title">The King Of Drum Tech Vol 01</h3>
-          <p>
-            DoskiWaAfrika steps into the spotlight with this bootleg EP showcasing his raw take on Afro House and Drum Tech.
+          <p class="release-description">
+            DoskiWaAfrika steps into the spotlight with "The King Of Drum Tech Vol 01", a bootleg EP that showcases his raw and uncompromising take on Afro House and Drum Tech. Packed with hypnotic rhythms, deep tribal energy, and authentic underground flair, this collection reimagines sounds from the streets of Africa to the dance floors of the world.
+          </p>
+          <p class="release-description">
+            This unofficial drop is a tribute to the pulse of Drum Tech culture, blending signature percussion with gritty edits and soulful echoes. Though not commercially released, this EP stands as a bold artistic statement from a rising voice in the scene.
           </p>
           <div class="release-links">
-            <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_01_EP.zip/file" class="btn btn-primary">Download</a>
+            <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_01_EP.zip/file" class="btn btn-primary">Download EP</a>
           </div>
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;">
-        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline" style="border-color: var(--highlight); color: var(--highlight);">Visit Our YouTube</a>
+        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
       </div>
     </div>
   </section>
@@ -467,8 +493,11 @@
         <img src="2.png" alt="NLM Music Group Africa Podcast" class="release-image">
         <div class="release-info">
           <h3 class="release-title">NLM Music Group Africa - Episode 01</h3>
-          <p>
-            Dive into the first electrifying episode mixed by DoskiWaAfrika! A hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.
+          <p class="release-description">
+            Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.
+          </p>
+          <p class="release-description">
+            Curated and hosted by I'M MusiQ, this episode showcases DoskiWaAfrika's signature blend of African-inspired electronic sounds, delivering an unforgettable sonic experience. Whether you're a dancefloor enthusiast or a laid-back vibe seeker, this mix is your ultimate soundtrack.
           </p>
           <div class="release-links">
             <a href="https://www.mediafire.com/file/ph3ih49gnn0h79v/NLM_Music_Group_Africa_Episode_01_Mixed_By_DoskiWaAfrika.mp3/file" class="btn btn-primary">Download</a>
@@ -477,7 +506,7 @@
         </div>
       </div>
       <div style="text-align: center; margin-top: 40px;">
-        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline" style="border-color: var(--highlight); color: var(--highlight);">Visit Our YouTube</a>
+        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
       </div>
     </div>
   </section>
@@ -505,7 +534,7 @@
           Have questions or want to work with us? Reach out via email or phone.
         </p>
         <div style="margin-bottom: 40px;">
-          <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" style="color: var(--highlight);">officialnlmmusicgroupafrica@gmail.com</a></p>
+          <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" class="email-link">officialnlmmusicgroupafrica@gmail.com</a></p>
           <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--highlight);">081 339 8293</a></p>
         </div>
         <div class="social-links">
