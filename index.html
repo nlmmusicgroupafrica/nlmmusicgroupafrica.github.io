@@ -366,6 +366,28 @@
         min-width: 100%;
       }
     }
+
+    /* New styles for additions */
+    .hero-mother {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .hero-mother img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--highlight);
+    }
+
+    .hero-mother p {
+      font-size: 1.2rem;
+      color: var(--highlight);
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -395,6 +417,10 @@
       <p>
         NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
       </p>
+      <div class="hero-mother">
+        <img src="6.png" alt="Ntampose Lettia Maduna">
+        <p>Ntampose Lettia Maduna</p>
+      </div>
       <div>
         <a href="#artists" class="btn btn-primary">Explore Artists</a>
         <a href="#events" class="btn btn-outline">Photography & Videography</a>
@@ -439,6 +465,13 @@
             <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
           </div>
         </div>
+        <div class="artist-card">
+          <img src="4.jpg" alt="De_Addict" class="artist-image">
+          <div class="artist-info">
+            <h3 class="artist-name">De_Addict</h3>
+            <p class="artist-bio">De_Addict is a South African Deep House and Deep Tech producer known for his hypnotic rhythms, immersive soundscapes, and soulful sonic textures. Blending underground groove with emotional depth, his music speaks to both the dancefloor and the inner world, creating a journey that resonates with true electronic music lovers.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -446,6 +479,20 @@
   <section id="releases" class="section">
     <div class="container">
       <h2 class="section-title">Music Releases</h2>
+      
+      <div class="release-card">
+        <img src="5.png" alt="The King Of Drum Tech Vol 02" class="release-image">
+        <div class="release-info">
+          <h3 class="release-title">The King Of Drum Tech Vol 02</h3>
+          <p class="release-description">
+            DoskiWaAfrika cements his legacy with The King Of Drum Tech Vol 02, a full-length album that expands the boundaries of Afro House and Drum Tech. Building on the raw energy of Vol 01, this project delivers a deeper, more immersive journey—packed with hypnotic rhythms, tribal intensity, and the gritty underground sound that has become DoskiWaAfrika's signature.
+          </p>
+          <div class="release-links">
+            <a href="https://www.mediafire.com/file/5hd7lj2cm9vy7g9/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_02_Album.zip/file" class="btn btn-primary">Download Album</a>
+          </div>
+        </div>
+      </div>
+      
       <div class="release-card">
         <img src="1.png" alt="The King Of Drum Tech Vol 01" class="release-image">
         <div class="release-info">
@@ -495,13 +542,8 @@
   <section id="events" class="section">
     <div class="container">
       <h2 class="section-title">NLM Shot It</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0;">
-        <img src="Picsart_25-07-08_04-36-41-528.png" alt="NLM Shot It Photography">
-        <img src="Picsart_25-07-13_02-40-30-651.png" alt="NLM Shot It Photography">
-      </div>
       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         <a href="https://www.instagram.com/nlm_shot_it?igsh=MXJybHNnY3Yyd2tsNg==" class="btn btn-outline">Instagram</a>
-        <a href="https://www.tiktok.com/@nlm_shot_it?_t=ZM-8yHcVDe3ZTU&_r=1" class="btn btn-outline">TikTok</a>
         <a href="https://www.facebook.com/profile.php?id=61576935651307&mibextid=rS40aB7S9Ucbxw6v" class="btn btn-outline">Facebook</a>
       </div>
     </div>
@@ -521,6 +563,7 @@
         <div class="social-links">
           <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ==">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=61576555839706">Facebook</a>
+          <a href="https://www.tiktok.com/@nlm_shot_it?_t=ZM-8yHcVDe3ZTU&_r=1">TikTok</a>
         </div>
       </div>
     </div>
