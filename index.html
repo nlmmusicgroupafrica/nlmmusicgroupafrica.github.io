@@ -8,7 +8,7 @@
   <style>
     :root {
       --primary: #000000;
-      --secondary: #FFD700; /* Gold */
+      --secondary: #FFD700;
       --text: #FFFFFF;
       --light-text: #BBBBBB;
       --bg: #0A0A0A;
@@ -17,13 +17,11 @@
       --border: rgba(255,215,0,0.2);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
       color: var(--text);
@@ -31,26 +29,22 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
     a {
       color: inherit;
       text-decoration: none;
       transition: var(--transition);
     }
-
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
-
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
-
     /* Header */
     header {
       position: fixed;
@@ -63,13 +57,11 @@
       border-bottom: 1px solid var(--border);
       box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
-
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     .logo {
       display: flex;
       align-items: center;
@@ -80,22 +72,18 @@
       letter-spacing: 1px;
       color: var(--secondary);
     }
-
     .logo img {
       height: 40px;
       transition: var(--transition);
     }
-
     .logo:hover img {
       transform: rotate(10deg);
     }
-
     nav ul {
       display: flex;
       list-style: none;
       gap: 30px;
     }
-
     nav a {
       font-weight: 600;
       font-size: 0.9rem;
@@ -105,7 +93,6 @@
       position: relative;
       padding: 5px 0;
     }
-
     nav a::after {
       content: '';
       position: absolute;
@@ -116,15 +103,12 @@
       background: var(--highlight);
       transition: var(--transition);
     }
-
     nav a:hover {
       color: var(--highlight);
     }
-
     nav a:hover::after {
       width: 100%;
     }
-
     /* Hero Section */
     .hero {
       padding: 180px 0 100px;
@@ -136,7 +120,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -147,12 +130,10 @@
       background: radial-gradient(circle, transparent 20%, var(--primary) 70%);
       z-index: 1;
     }
-
     .hero .container {
       position: relative;
       z-index: 2;
     }
-
     .hero h1 {
       font-size: 4rem;
       margin-bottom: 20px;
@@ -163,7 +144,6 @@
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
       animation: fadeInDown 1s ease;
     }
-
     .hero p {
       max-width: 700px;
       margin: 0 auto 30px;
@@ -171,7 +151,6 @@
       font-size: 1.1rem;
       animation: fadeIn 1.5s ease;
     }
-
     .btn {
       display: inline-block;
       padding: 15px 35px;
@@ -186,7 +165,6 @@
       overflow: hidden;
       z-index: 1;
     }
-
     .btn::before {
       content: '';
       position: absolute;
@@ -198,39 +176,32 @@
       transition: var(--transition);
       z-index: -1;
     }
-
     .btn:hover::before {
       width: 100%;
     }
-
     .btn-primary {
       background-color: var(--highlight);
       color: var(--primary);
       border: 2px solid var(--highlight);
     }
-
     .btn-primary:hover {
       background-color: transparent;
       color: var(--highlight);
     }
-
     .btn-outline {
       border: 2px solid var(--secondary);
       color: var(--secondary);
     }
-
     .btn-outline:hover {
       background-color: var(--secondary);
       color: var(--primary);
     }
-
     /* Sections */
     .section {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
       position: relative;
     }
-
     .section-title {
       text-align: center;
       margin-bottom: 60px;
@@ -242,7 +213,6 @@
       position: relative;
       display: inline-block;
     }
-
     .section-title::after {
       content: '';
       position: absolute;
@@ -253,7 +223,6 @@
       height: 3px;
       background: var(--highlight);
     }
-
     /* About Section */
     .about-container {
       display: flex;
@@ -261,7 +230,6 @@
       gap: 30px;
       flex-wrap: wrap;
     }
-
     .about-card {
       flex: 1;
       min-width: 250px;
@@ -273,12 +241,10 @@
       transition: var(--transition);
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
     .about-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     }
-
     .about-card img {
       width: 120px;
       height: 120px;
@@ -287,7 +253,6 @@
       margin: 0 auto 20px;
       border: 3px solid var(--highlight);
     }
-
     .mother-tribute {
       display: flex;
       align-items: center;
@@ -300,7 +265,6 @@
       border-radius: 5px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
     .mother-tribute img {
       width: 150px;
       height: 150px;
@@ -308,7 +272,6 @@
       border: 3px solid var(--highlight);
       object-fit: cover;
     }
-
     .mother-tribute p {
       font-size: 1.2rem;
       color: var(--highlight);
@@ -316,7 +279,6 @@
       text-align: center;
       flex: 1;
     }
-
     /* Artists Section - Redesigned */
     .artists-container {
       display: flex;
@@ -325,7 +287,6 @@
       gap: 30px;
       margin-top: 40px;
     }
-
     .artist-card {
       width: 280px;
       background-color: var(--card-bg);
@@ -335,29 +296,24 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       position: relative;
     }
-
     .artist-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     }
-
     .artist-image-container {
       position: relative;
       overflow: hidden;
       height: 350px;
     }
-
     .artist-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: var(--transition);
     }
-
     .artist-card:hover .artist-image {
       transform: scale(1.1);
     }
-
     .artist-social {
       position: absolute;
       bottom: 20px;
@@ -369,11 +325,9 @@
       opacity: 0;
       transition: var(--transition);
     }
-
     .artist-card:hover .artist-social {
       opacity: 1;
     }
-
     .artist-social a {
       width: 40px;
       height: 40px;
@@ -385,18 +339,15 @@
       justify-content: center;
       transition: var(--transition);
     }
-
     .artist-social a:hover {
       transform: translateY(-5px);
       background: var(--primary);
       color: var(--highlight);
     }
-
     .artist-info {
       padding: 25px;
       text-align: center;
     }
-
     .artist-name {
       font-size: 1.5rem;
       font-weight: 700;
@@ -406,7 +357,6 @@
       position: relative;
       display: inline-block;
     }
-
     .artist-name::after {
       content: '';
       position: absolute;
@@ -417,13 +367,11 @@
       height: 2px;
       background: var(--highlight);
     }
-
     .artist-bio {
       color: var(--light-text);
       line-height: 1.7;
       margin-bottom: 15px;
     }
-
     .artist-genre {
       display: inline-block;
       padding: 5px 15px;
@@ -433,7 +381,6 @@
       font-size: 0.8rem;
       font-weight: 600;
     }
-
     /* Releases Section */
     .release-card {
       max-width: 800px;
@@ -445,23 +392,19 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       transition: var(--transition);
     }
-
     .release-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     }
-
     .release-image {
       width: 300px;
       height: auto;
       object-fit: cover;
     }
-
     .release-info {
       padding: 30px;
       flex: 1;
     }
-
     .release-title {
       font-size: 1.8rem;
       font-weight: 700;
@@ -469,19 +412,16 @@
       text-transform: uppercase;
       color: var(--secondary);
     }
-
     .release-description {
       color: var(--light-text);
       margin-bottom: 20px;
       line-height: 1.7;
     }
-
     .release-links {
       display: flex;
       gap: 15px;
       margin-top: 30px;
     }
-
     /* Footer */
     footer {
       background-color: var(--primary);
@@ -490,7 +430,6 @@
       text-align: center;
       position: relative;
     }
-
     footer::before {
       content: '';
       position: absolute;
@@ -500,14 +439,12 @@
       height: 1px;
       background: linear-gradient(to right, transparent, var(--highlight), transparent);
     }
-
     .social-links {
       display: flex;
       justify-content: center;
       gap: 30px;
       margin: 30px 0;
     }
-
     .social-links a {
       color: var(--light-text);
       font-weight: 600;
@@ -518,11 +455,9 @@
       align-items: center;
       gap: 8px;
     }
-
     .social-links a:hover {
       color: var(--highlight);
     }
-
     .footer-links {
       display: flex;
       justify-content: center;
@@ -530,29 +465,24 @@
       margin-bottom: 30px;
       flex-wrap: wrap;
     }
-
     .footer-links a {
       color: var(--light-text);
       font-size: 0.9rem;
       transition: var(--transition);
     }
-
     .footer-links a:hover {
       color: var(--highlight);
     }
-
     .email-link {
       word-break: break-all;
       color: var(--highlight);
       font-weight: 600;
     }
-
     /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     @keyframes fadeInDown {
       from {
         opacity: 0;
@@ -563,7 +493,6 @@
         transform: translateY(0);
       }
     }
-
     /* Responsive */
     @media (max-width: 992px) {
       .release-card {
@@ -574,35 +503,28 @@
         height: 300px;
       }
     }
-
     @media (max-width: 768px) {
       .header-container {
         flex-direction: column;
         gap: 20px;
       }
-
       nav ul {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
       }
-
       .hero {
         padding: 150px 0 80px;
       }
-
       .hero h1 {
         font-size: 2.5rem;
       }
-
       .section {
         padding: 80px 0;
       }
-
       .about-card {
         min-width: 100%;
       }
-
       .mother-tribute {
         flex-direction: column;
         text-align: center;
@@ -685,8 +607,6 @@
             <img src="doski.png" alt="DoskiWaAfrika" class="artist-image">
             <div class="artist-social">
               <a href="https://www.facebook.com/KingOfDrumTech"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-spotify"></i></a>
             </div>
           </div>
           <div class="artist-info">
@@ -700,9 +620,7 @@
           <div class="artist-image-container">
             <img src="aa.png" alt="I'M MusiQ" class="artist-image">
             <div class="artist-social">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-spotify"></i></a>
+              <!-- No social links for I'M MusiQ -->
             </div>
           </div>
           <div class="artist-info">
@@ -716,9 +634,8 @@
           <div class="artist-image-container">
             <img src="7.jpg" alt="T.fly deDeejay" class="artist-image">
             <div class="artist-social">
+              <a href="https://www.facebook.com/profile.php?id=61576935651307&mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook"></i></a>
               <a href="https://www.instagram.com/ofentsepietsetshase?igsh=MTdjOHc0cXk1b29rYQ=="><i class="fab fa-instagram"></i></a>
-              <a href="https://www.tiktok.com/@t.fly.dedeejay0?_t=ZM-8yqXFazveWG&_r=1"><i class="fab fa-tiktok"></i></a>
-              <a href="#"><i class="fab fa-spotify"></i></a>
             </div>
           </div>
           <div class="artist-info">
