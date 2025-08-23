@@ -79,6 +79,12 @@
     .logo:hover img {
       transform: rotate(10deg);
     }
+    .logo-full-name {
+      font-size: 1.2rem;
+      margin-left: 5px;
+      color: var(--text);
+      font-weight: 600;
+    }
     nav ul {
       display: flex;
       list-style: none;
@@ -260,24 +266,57 @@
       gap: 30px;
       margin: 50px auto;
       max-width: 800px;
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, var(--card-bg) 0%, rgba(26,26,26,0.8) 100%);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .mother-tribute::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(255,215,0,0.1) 0%, transparent 70%);
+      z-index: 0;
     }
     .mother-tribute img {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      border: 3px solid var(--highlight);
+      border: 4px solid var(--highlight);
       object-fit: cover;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+      transition: var(--transition);
+    }
+    .mother-tribute:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255,215,0,0.3);
+    }
+    .mother-tribute-content {
+      flex: 1;
+      position: relative;
+      z-index: 1;
     }
     .mother-tribute p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: var(--highlight);
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
-      flex: 1;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    .mother-tribute .title {
+      font-size: 1rem;
+      color: var(--light-text);
+      text-align: center;
+      font-style: italic;
     }
     /* Artists Section - Redesigned */
     .artists-container {
@@ -529,6 +568,9 @@
         flex-direction: column;
         text-align: center;
       }
+      .logo-full-name {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -538,6 +580,7 @@
       <a href="#home" class="logo">
         <img src="logo.png" alt="NLM Music Group Africa">
         <span>NLM</span>
+        <span class="logo-full-name">Music Group Africa</span>
       </a>
       <nav>
         <ul>
@@ -575,7 +618,10 @@
       
       <div class="mother-tribute">
         <img src="6.png" alt="Ntampose Lettia Maduna">
-        <p>Ntampose Lettia Maduna</p>
+        <div class="mother-tribute-content">
+          <p>Ntampose Lettia Maduna</p>
+          <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
+        </div>
       </div>
       
       <div class="about-container">
