@@ -852,34 +852,6 @@
       background: var(--accent);
       transform: scale(1.2);
     }
-    
-    .youtube-icon {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    
-    .youtube-icon a {
-      width: 60px;
-      height: 60px;
-      background: var(--gradient);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
-      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
-    }
-    
-    .youtube-icon a:hover {
-      transform: scale(1.1) translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255, 0, 200, 0.5);
-    }
-    
-    .youtube-icon i {
-      font-size: 28px;
-      color: white;
-    }
   </style>
 </head>
 <body>
@@ -895,7 +867,7 @@
           <li><a href="#" onclick="showPage('home')">Home</a></li>
           <li><a href="#" onclick="showPage('about')">About</a></li>
           <li><a href="#" onclick="showPage('artists')">Artists</a></li>
-          <li><a href="#" onclick="showPage('releases')">Music</a></li>
+          <li><a href="#" onclick="showPage('releases')">Releases</a></li>
           <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1131,13 +1103,7 @@
   <div id="releases" class="page-content">
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Music</h2>
-        
-        <div class="youtube-icon">
-          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
+        <h2 class="section-title">Music Releases</h2>
         
         <div class="release-card">
           <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
@@ -1180,6 +1146,9 @@
             </div>
           </div>
         </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
+        </div>
       </div>
     </section>
   </div>
@@ -1213,7 +1182,7 @@
         <a href="#" onclick="showPage('home')">Home</a>
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('artists')">Artists</a>
-        <a href="#" onclick="showPage('releases')">Music</a>
+        <a href="#" onclick="showPage('releases')">Releases</a>
         <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="social-links">
