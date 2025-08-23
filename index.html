@@ -8,15 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0A0A2A;
-      --secondary: #FF00C8;
-      --accent: #00F0FF;
+      --primary: #000000;
+      --secondary: #FFD700;
+      --accent: #FF8C00;
       --highlight: #FFD700;
       --text: #FFFFFF;
-      --light-text: #BBBBBB;
-      --bg: #0A0A2A;
-      --card-bg: rgba(26, 26, 48, 0.8);
-      --border: rgba(0, 240, 255, 0.3);
+      --light-text: #DDDDDD;
+      --bg: #0A0A0A;
+      --card-bg: rgba(26, 26, 26, 0.9);
+      --border: rgba(255, 215, 0, 0.4);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       --gradient: linear-gradient(135deg, var(--secondary), var(--accent));
     }
@@ -34,8 +34,8 @@
       line-height: 1.6;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 20% 30%, rgba(255, 0, 200, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.15) 0%, transparent 40%);
+        radial-gradient(circle at 15% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 85% 70%, rgba(255, 140, 0, 0.1) 0%, transparent 30%);
     }
     
     a {
@@ -63,7 +63,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(10, 10, 42, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 15px 0;
@@ -85,16 +85,14 @@
       font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
+      color: var(--secondary);
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
     }
     
     .logo img {
       height: 40px;
       transition: var(--transition);
-      filter: drop-shadow(0 0 5px rgba(255, 0, 200, 0.5));
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
     }
     
     .logo:hover img {
@@ -136,7 +134,7 @@
     }
     
     nav a:hover {
-      color: var(--accent);
+      color: var(--secondary);
     }
     
     nav a:hover::after {
@@ -147,9 +145,7 @@
     .hero {
       padding: 180px 0 100px;
       text-align: center;
-      background: linear-gradient(rgba(10, 10, 42, 0.9), rgba(10, 10, 42, 0.9));
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
       position: relative;
       overflow: hidden;
     }
@@ -162,8 +158,8 @@
       width: 100%;
       height: 100%;
       background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 0, 200, 0.2) 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.2) 0%, transparent 30%);
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(255, 140, 0, 0.15) 0%, transparent 30%);
       z-index: 1;
     }
     
@@ -178,10 +174,8 @@
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: var(--secondary);
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
       animation: fadeInDown 1s ease;
     }
     
@@ -228,27 +222,27 @@
     
     .btn-primary {
       background: var(--gradient);
-      color: white;
-      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
+      color: var(--primary);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
     }
     
     .btn-primary:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(255, 0, 200, 0.4);
-      color: white;
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+      color: var(--primary);
     }
     
     .btn-outline {
-      border: 2px solid var(--accent);
-      color: var(--accent);
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
       background: transparent;
     }
     
     .btn-outline:hover {
-      background: var(--accent);
+      background: var(--secondary);
       color: var(--primary);
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
     }
     
     /* Sections */
@@ -264,9 +258,7 @@
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--secondary);
       position: relative;
       display: inline-block;
     }
@@ -307,7 +299,7 @@
     
     .about-card:hover {
       transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
     }
     
     .about-card img {
@@ -346,7 +338,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at top right, rgba(255, 0, 200, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle at top right, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
       z-index: 0;
     }
     
@@ -367,7 +359,7 @@
     
     .mother-tribute:hover img {
       transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(255, 0, 200, 0.4);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
     }
     
     .mother-tribute-content {
@@ -415,7 +407,7 @@
     
     .artist-card:hover {
       transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 240, 255, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
     }
     
     .artist-image-container {
@@ -455,7 +447,7 @@
       width: 40px;
       height: 40px;
       background: var(--gradient);
-      color: white;
+      color: var(--primary);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -466,7 +458,7 @@
     
     .artist-social a:hover {
       transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     }
     
     .artist-info {
@@ -479,9 +471,7 @@
       font-weight: 800;
       margin-bottom: 10px;
       text-transform: uppercase;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--secondary);
       position: relative;
       display: inline-block;
     }
@@ -507,12 +497,12 @@
     .artist-genre {
       display: inline-block;
       padding: 5px 15px;
-      background: rgba(0, 240, 255, 0.1);
-      color: var(--accent);
+      background: rgba(255, 215, 0, 0.1);
+      color: var(--secondary);
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 600;
-      border: 1px solid rgba(0, 240, 255, 0.3);
+      border: 1px solid rgba(255, 215, 0, 0.3);
     }
     
     /* Releases Section */
@@ -531,7 +521,7 @@
     
     .release-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
     }
     
     .release-image {
@@ -550,9 +540,7 @@
       font-weight: 800;
       margin-bottom: 20px;
       text-transform: uppercase;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--secondary);
     }
     
     .release-description {
@@ -569,7 +557,7 @@
     
     /* Footer */
     footer {
-      background: rgba(10, 10, 42, 0.95);
+      background: rgba(0, 0, 0, 0.95);
       color: var(--text);
       padding: 60px 0 30px;
       text-align: center;
@@ -607,7 +595,7 @@
     }
     
     .social-links a:hover {
-      color: var(--accent);
+      color: var(--secondary);
       transform: translateY(-3px);
     }
     
@@ -626,13 +614,13 @@
     }
     
     .footer-links a:hover {
-      color: var(--accent);
+      color: var(--secondary);
       transform: translateY(-3px);
     }
     
     .email-link {
       word-break: break-all;
-      color: var(--accent);
+      color: var(--secondary);
       font-weight: 600;
     }
     
@@ -722,7 +710,7 @@
     
     /* Glow effect */
     .glow {
-      text-shadow: 0 0 10px rgba(255, 0, 200, 0.5), 0 0 20px rgba(255, 0, 200, 0.3);
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
     }
   </style>
 </head>
@@ -942,7 +930,7 @@
         </p>
         <div style="margin-bottom: 40px;">
           <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" class="email-link">officialnlmmusicgroupafrica@gmail.com</a></p>
-          <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--accent);">081 339 8293</a></p>
+          <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--secondary);">081 339 8293</a></p>
         </div>
         <div class="social-links">
           <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
