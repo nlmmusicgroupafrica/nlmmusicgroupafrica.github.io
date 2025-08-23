@@ -734,6 +734,124 @@
     .page-content.active {
       display: block;
     }
+    
+    /* Artist Slider */
+    .artist-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+    }
+    
+    .slider-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+    }
+    
+    .slide-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 4px solid transparent;
+      background: var(--gradient) padding-box, var(--gradient) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .slide-content {
+      text-align: center;
+      max-width: 600px;
+    }
+    
+    .slide-name {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .slide-bio {
+      color: var(--light-text);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .slide-genre {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(0, 240, 255, 0.1);
+      color: var(--accent);
+      border-radius: 25px;
+      font-weight: 600;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      margin-bottom: 25px;
+    }
+    
+    .slider-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .slider-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1.2rem;
+    }
+    
+    .slider-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
+    }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--light-text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
@@ -773,30 +891,64 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Featured Artists</h2>
-        <div class="artists-container">
-          <div class="artist-card">
-            <div class="artist-image-container">
-              <img src="8.png" alt="DoskiWaAfrika" class="artist-image">
+        <h2 class="section-title">Featured Artist</h2>
+        
+        <div class="artist-slider">
+          <div class="slider-container" id="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <img src="8.png" alt="DoskiWaAfrika" class="slide-image">
+              <div class="slide-content">
+                <h3 class="slide-name">DoskiWaAfrika</h3>
+                <p class="slide-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
+                <span class="slide-genre">Afro House | Deep Tech</span>
+              </div>
             </div>
-            <div class="artist-info">
-              <h3 class="artist-name">DoskiWaAfrika</h3>
-              <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa.</p>
-              <span class="artist-genre">Afro House | Deep Tech</span>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="9.png" alt="I'M MusiQ" class="slide-image">
+              <div class="slide-content">
+                <h3 class="slide-name">I'M MusiQ</h3>
+                <p class="slide-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity.</p>
+                <span class="slide-genre">Amapiano | EDM</span>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="11.png" alt="T.fly deDeejay" class="slide-image">
+              <div class="slide-content">
+                <h3 class="slide-name">T.fly deDeejay</h3>
+                <p class="slide-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy.</p>
+                <span class="slide-genre">Progressive House | Afro House</span>
+              </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img src="13.png" alt="Vutome" class="slide-image">
+              <div class="slide-content">
+                <h3 class="slide-name">Vutome</h3>
+                <p class="slide-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies.</p>
+                <span class="slide-genre">Deep House | Soulful House</span>
+              </div>
             </div>
           </div>
           
-          <div class="artist-card">
-            <div class="artist-image-container">
-              <img src="9.png" alt="I'M MusiQ" class="artist-image">
-            </div>
-            <div class="artist-info">
-              <h3 class="artist-name">I'M MusiQ</h3>
-              <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM.</p>
-              <span class="artist-genre">Amapiano | EDM</span>
-            </div>
+          <div class="slider-nav">
+            <button class="slider-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          
+          <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
           </div>
         </div>
+        
         <div style="text-align: center; margin-top: 40px;">
           <a href="#" class="btn btn-primary" onclick="showPage('artists')">View All Artists</a>
         </div>
@@ -895,7 +1047,7 @@
             </div>
             <div class="artist-info">
               <h3 class="artist-name">I'M MusiQ</h3>
-              <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity.</p>
+              <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity. Inspired by both classical and modern dance music, he crafts immersive tracks that captivate listeners and energize crowds.</p>
               <span class="artist-genre">Amapiano | EDM</span>
             </div>
           </div>
@@ -906,7 +1058,7 @@
             </div>
             <div class="artist-info">
               <h3 class="artist-name">T.fly deDeejay</h3>
-              <p class="artist-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy.</p>
+              <p class="artist-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy. His sound is a fusion of rich African influences and modern electronic production, designed to move both bodies and minds.</p>
               <span class="artist-genre">Progressive House | Afro House</span>
             </div>
           </div>
@@ -917,7 +1069,7 @@
             </div>
             <div class="artist-info">
               <h3 class="artist-name">Vutome</h3>
-              <p class="artist-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies.</p>
+              <p class="artist-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies, crafted for both introspection and dance.</p>
               <span class="artist-genre">Deep House | Soulful House</span>
             </div>
           </div>
@@ -1049,6 +1201,9 @@
       } else {
         showPage('home');
       }
+      
+      // Start the slider
+      startSlider();
     });
 
     // Smooth scrolling for anchor links
@@ -1083,6 +1238,40 @@
         el.style.animationDelay = `${index * 0.2}s`;
       });
     });
+    
+    // Artist Slider Functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const slider = document.getElementById('slider-container');
+    
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlider();
+    }
+    
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+    
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlider();
+    }
+    
+    function startSlider() {
+      setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
   </script>
 </body>
 </html>
