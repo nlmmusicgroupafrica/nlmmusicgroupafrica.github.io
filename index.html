@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NLM Music Group Africa</title>
+  <title>NLM Music Group Africa - Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
@@ -724,245 +724,293 @@
     .glow {
       text-shadow: 0 0 10px rgba(255, 0, 200, 0.5), 0 0 20px rgba(255, 0, 200, 0.3);
     }
+    
+    /* Page content styles */
+    .page-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .page-content.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <a href="#home" class="logo">
+      <a href="#" class="logo" onclick="showPage('home')">
         <img src="logo.png" alt="NLM Music Group Africa">
         <span>NLM</span>
         <span class="logo-full-name">Music Group Africa</span>
       </a>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#artists">Artists</a></li>
-          <li><a href="#releases">Releases</a></li>
-          <li><a href="#podcast">Podcast</a></li>
-          <li><a href="#events">NLM Shot It</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('artists')">Artists</a></li>
+          <li><a href="#" onclick="showPage('releases')">Releases</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>We Are NLM Family</h1>
-      <p>
-        NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
-      </p>
-      <div>
-        <a href="#artists" class="btn btn-primary">Explore Artists</a>
-        <a href="#releases" class="btn btn-outline">Check Music Releases</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--light-text);">
-        NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
-      </p>
-      
-      <div class="mother-tribute floating">
-        <img src="6.png" alt="Ntampose Lettia Maduna">
-        <div class="mother-tribute-content">
-          <p>Ntampose Lettia Maduna</p>
-          <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
-        </div>
-      </div>
-      
-      <div class="about-container">
-        <div class="about-card floating">
-          <img src="founder.png" alt="Founder">
-          <h3>Founder</h3>
-          <p>Ailwei Maduna Wa Malada</p>
-        </div>
-        <div class="about-card floating">
-          <img src="ar.png" alt="Head of A&R">
-          <h3>Head of Music (A&R)</h3>
-          <p>Ailwei Maduna Wa Malada</p>
-        </div>
-        <div class="about-card floating">
-          <img src="cameraman.png" alt="Head of Shot It">
-          <h3>Head of NLM Shot It</h3>
-          <p>Ailwei Maduna Wa Malada</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="artists" class="section">
-    <div class="container">
-      <h2 class="section-title">NLM Artists</h2>
-      <div class="artists-container">
-        <div class="artist-card">
-          <div class="artist-image-container">
-            <img src="8.png" alt="DoskiWaAfrika" class="artist-image">
-          </div>
-          <div class="artist-info">
-            <h3 class="artist-name">DoskiWaAfrika</h3>
-            <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
-            <span class="artist-genre">Afro House | Deep Tech</span>
-          </div>
-        </div>
-        
-        <div class="artist-card">
-          <div class="artist-image-container">
-            <img src="9.png" alt="I'M MusiQ" class="artist-image">
-          </div>
-          <div class="artist-info">
-            <h3 class="artist-name">I'M MusiQ</h3>
-            <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity. Inspired by both classical and modern dance music, he crafts immersive tracks that captivate listeners and energize crowds.</p>
-            <span class="artist-genre">Amapiano | EDM</span>
-          </div>
-        </div>
-        
-        <div class="artist-card">
-          <div class="artist-image-container">
-            <img src="11.png" alt="T.fly deDeejay" class="artist-image">
-          </div>
-          <div class="artist-info">
-            <h3 class="artist-name">T.fly deDeejay</h3>
-            <p class="artist-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy. His sound is a fusion of rich African influences and modern electronic production, designed to move both bodies and minds.</p>
-            <span class="artist-genre">Progressive House | Afro House</span>
-          </div>
-        </div>
-        
-        <div class="artist-card">
-          <div class="artist-image-container">
-            <img src="13.png" alt="Vutome" class="artist-image">
-          </div>
-          <div class="artist-info">
-            <h3 class="artist-name">Vutome</h3>
-            <p class="artist-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies, crafted for both introspection and dance.</p>
-            <span class="artist-genre">Deep House | Soulful House</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="releases" class="section">
-    <div class="container">
-      <h2 class="section-title">Music Releases</h2>
-      
-      <div class="release-card">
-        <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
-        <div class="release-info">
-          <h3 class="release-title">Tomorrowland Anthems Album</h3>
-          <p class="release-description">
-            Brace yourself for a seismic clash of sounds—where Amapiano’s hypnotic grooves collide with EDM’s explosive drops! Tomorrowland Anthems isn’t just a remix album; it’s a global dancefloor revolution. I'M MusiQ takes iconic festival bangers and injects them with Afro-house swagger, rewiring them with log-drum rhythms, shimmering synths, and basslines that hit like lightning.
-          </p>
-          <div class="release-links">
-            <a href="https://www.mediafire.com/file/cckwtg7vf4pel7c/I%27M_MusiQ_-_Tomorrowland_Anthems_Album.zip/file" class="btn btn-primary">Download Album</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="release-card">
-        <img src="5.png" alt="The King Of Drum Tech Vol 02" class="release-image">
-        <div class="release-info">
-          <h3 class="release-title">The King Of Drum Tech Vol 02</h3>
-          <p class="release-description">
-            DoskiWaAfrika cements his legacy with The King Of Drum Tech Vol 02, a full-length album that expands the boundaries of Afro House and Drum Tech. Building on the raw energy of Vol 01, this project delivers a deeper, more immersive journey—packed with hypnotic rhythms, tribal intensity, and the gritty underground sound that has become DoskiWaAfrika's signature.
-          </p>
-          <div class="release-links">
-            <a href="https://www.mediafire.com/file/5hd7lj2cm9vy7g9/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_02_Album.zip/file" class="btn btn-primary">Download Album</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="release-card">
-        <img src="1.png" alt="The King Of Drum Tech Vol 01" class="release-image">
-        <div class="release-info">
-          <h3 class="release-title">The King Of Drum Tech Vol 01</h3>
-          <p class="release-description">
-            DoskiWaAfrika steps into the spotlight with "The King Of Drum Tech Vol 01", a bootleg EP that showcases his raw and uncompromising take on Afro House and Drum Tech. Packed with hypnotic rhythms, deep tribal energy, and authentic underground flair, this collection reimagines sounds from the streets of Africa to the dance floors of the world.
-          </p>
-          <p class="release-description">
-            This unofficial drop is a tribute to the pulse of Drum Tech culture, blending signature percussion with gritty edits and soulful echoes. Though not commercially released, this EP stands as a bold artistic statement from a rising voice in the scene.
-          </p>
-          <div class="release-links">
-            <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_01_EP.zip/file" class="btn btn-primary">Download EP</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="podcast" class="section">
-    <div class="container">
-      <h2 class="section-title">Podcast</h2>
-      <div class="release-card">
-        <img src="2.png" alt="NLM Music Group Africa Podcast" class="release-image">
-        <div class="release-info">
-          <h3 class="release-title">NLM Music Group Africa - Episode 01</h3>
-          <p class="release-description">
-            Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.
-          </p>
-          <p class="release-description">
-            Curated and hosted by I'M MusiQ, this episode showcases DoskiWaAfrika's signature blend of African-inspired electronic sounds, delivering an unforgettable sonic experience. Whether you're a dancefloor enthusiast or a laid-back vibe seeker, this mix is your ultimate soundtrack.
-          </p>
-          <div class="release-links">
-            <a href="https://www.mediafire.com/file/ph3ih49gnn0h79v/NLM_Music_Group_Africa_Episode_01_Mixed_By_DoskiWaAfrika.mp3/file" class="btn btn-primary">Download</a>
-            <a href="https://youtu.be/gSPKtqdvzeY?si=zCr2J51uj57MEFB0" class="btn btn-outline">Stream</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="events" class="section">
-    <div class="container">
-      <h2 class="section-title">NLM Shot It</h2>
-      <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="https://www.instagram.com/nlm_shot_it?igsh=MXJybHNnY3Yyd2tsNg==" class="btn btn-outline">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61576935651307&mibextid=rS40aB7S9Ucbxw6v" class="btn btn-outline">Facebook</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border); backdrop-filter: blur(10px);">
-        <p style="margin-bottom: 30px; color: var(--light-text);">
-          Have questions or want to work with us? Reach out via email or phone.
+  <!-- Home Page -->
+  <div id="home" class="page-content active">
+    <section class="hero">
+      <div class="container">
+        <h1>We Are NLM Family</h1>
+        <p>
+          NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
         </p>
-        <div style="margin-bottom: 40px;">
-          <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" class="email-link">officialnlmmusicgroupafrica@gmail.com</a></p>
-          <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--accent);">081 339 8293</a></p>
-        </div>
-        <div class="social-links">
-          <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook"></i> Facebook</a>
-          <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i> TikTok</a>
+        <div>
+          <a href="#" class="btn btn-primary" onclick="showPage('artists')">Explore Artists</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('releases')">Check Music Releases</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Artists</h2>
+        <div class="artists-container">
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="8.png" alt="DoskiWaAfrika" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">DoskiWaAfrika</h3>
+              <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa.</p>
+              <span class="artist-genre">Afro House | Deep Tech</span>
+            </div>
+          </div>
+          
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="9.png" alt="I'M MusiQ" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">I'M MusiQ</h3>
+              <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM.</p>
+              <span class="artist-genre">Amapiano | EDM</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="btn btn-primary" onclick="showPage('artists')">View All Artists</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Latest Releases</h2>
+        
+        <div class="release-card">
+          <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Tomorrowland Anthems Album</h3>
+            <p class="release-description">
+              Brace yourself for a seismic clash of sounds—where Amapiano’s hypnotic grooves collide with EDM’s explosive drops!
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/cckwtg7vf4pel7c/I%27M_MusiQ_-_Tomorrowland_Anthems_Album.zip/file" class="btn btn-primary">Download Album</a>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="btn btn-outline" onclick="showPage('releases')">View All Releases</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- About Page -->
+  <div id="about" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--light-text);">
+          NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
+        </p>
+        
+        <div class="mother-tribute floating">
+          <img src="6.png" alt="Ntampose Lettia Maduna">
+          <div class="mother-tribute-content">
+            <p>Ntampose Lettia Maduna</p>
+            <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
+          </div>
+        </div>
+        
+        <div class="about-container">
+          <div class="about-card floating">
+            <img src="founder.png" alt="Founder">
+            <h3>Founder</h3>
+            <p>Ailwei Maduna Wa Malada</p>
+          </div>
+          <div class="about-card floating">
+            <img src="ar.png" alt="Head of A&R">
+            <h3>Head of Music (A&R)</h3>
+            <p>Ailwei Maduna Wa Malada</p>
+          </div>
+          <div class="about-card floating">
+            <img src="cameraman.png" alt="Head of Shot It">
+            <h3>Head of Operations</h3>
+            <p>Ailwei Maduna Wa Malada</p>
+          </div>
+        </div>
+        
+        <div style="max-width: 800px; margin: 60px auto 0; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border);">
+          <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent);">Our Mission</h3>
+          <p style="color: var(--light-text); line-height: 1.8; text-align: center;">
+            At NLM Music Group Africa, we are dedicated to discovering and nurturing African musical talent, providing a platform for artists to share their unique sounds with the world. We believe in the power of music to transcend boundaries and bring people together.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Artists Page -->
+  <div id="artists" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">NLM Artists</h2>
+        <div class="artists-container">
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="8.png" alt="DoskiWaAfrika" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">DoskiWaAfrika</h3>
+              <p class="artist-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
+              <span class="artist-genre">Afro House | Deep Tech</span>
+            </div>
+          </div>
+          
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="9.png" alt="I'M MusiQ" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">I'M MusiQ</h3>
+              <p class="artist-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity.</p>
+              <span class="artist-genre">Amapiano | EDM</span>
+            </div>
+          </div>
+          
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="11.png" alt="T.fly deDeejay" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">T.fly deDeejay</h3>
+              <p class="artist-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy.</p>
+              <span class="artist-genre">Progressive House | Afro House</span>
+            </div>
+          </div>
+          
+          <div class="artist-card">
+            <div class="artist-image-container">
+              <img src="13.png" alt="Vutome" class="artist-image">
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">Vutome</h3>
+              <p class="artist-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies.</p>
+              <span class="artist-genre">Deep House | Soulful House</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Releases Page -->
+  <div id="releases" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Music Releases</h2>
+        
+        <div class="release-card">
+          <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Tomorrowland Anthems Album</h3>
+            <p class="release-description">
+              Brace yourself for a seismic clash of sounds—where Amapiano’s hypnotic grooves collide with EDM’s explosive drops! Tomorrowland Anthems isn’t just a remix album; it’s a global dancefloor revolution. I'M MusiQ takes iconic festival bangers and injects them with Afro-house swagger, rewiring them with log-drum rhythms, shimmering synths, and basslines that hit like lightning.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/cckwtg7vf4pel7c/I%27M_MusiQ_-_Tomorrowland_Anthems_Album.zip/file" class="btn btn-primary">Download Album</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="release-card">
+          <img src="5.png" alt="The King Of Drum Tech Vol 02" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">The King Of Drum Tech Vol 02</h3>
+            <p class="release-description">
+              DoskiWaAfrika cements his legacy with The King Of Drum Tech Vol 02, a full-length album that expands the boundaries of Afro House and Drum Tech. Building on the raw energy of Vol 01, this project delivers a deeper, more immersive journey—packed with hypnotic rhythms, tribal intensity, and the gritty underground sound that has become DoskiWaAfrika's signature.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/5hd7lj2cm9vy7g9/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_02_Album.zip/file" class="btn btn-primary">Download Album</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="release-card">
+          <img src="1.png" alt="The King Of Drum Tech Vol 01" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">The King Of Drum Tech Vol 01</h3>
+            <p class="release-description">
+              DoskiWaAfrika steps into the spotlight with "The King Of Drum Tech Vol 01", a bootleg EP that showcases his raw and uncompromising take on Afro House and Drum Tech. Packed with hypnotic rhythms, deep tribal energy, and authentic underground flair, this collection reimagines sounds from the streets of Africa to the dance floors of the world.
+            </p>
+            <p class="release-description">
+              This unofficial drop is a tribute to the pulse of Drum Tech culture, blending signature percussion with gritty edits and soulful echoes. Though not commercially released, this EP stands as a bold artistic statement from a rising voice in the scene.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_01_EP.zip/file" class="btn btn-primary">Download EP</a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" class="btn btn-outline">Visit Our YouTube</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact Page -->
+  <div id="contact" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border); backdrop-filter: blur(10px);">
+          <p style="margin-bottom: 30px; color: var(--light-text);">
+            Have questions or want to work with us? Reach out via email or phone.
+          </p>
+          <div style="margin-bottom: 40px;">
+            <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" class="email-link">officialnlmmusicgroupafrica@gmail.com</a></p>
+            <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--accent);">081 339 8293</a></p>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i> TikTok</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#artists">Artists</a>
-        <a href="#releases">Releases</a>
-        <a href="#podcast">Podcast</a>
-        <a href="#events">NLM Shot It</a>
-        <a href="#contact">Contact</a>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('artists')">Artists</a>
+        <a href="#" onclick="showPage('releases')">Releases</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="social-links">
         <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
@@ -976,13 +1024,43 @@
   </footer>
 
   <script>
+    // Function to show the selected page and hide others
+    function showPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page-content').forEach(page => {
+        page.classList.remove('active');
+      });
+      
+      // Show the selected page
+      document.getElementById(pageId).classList.add('active');
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
+      
+      // Update URL hash
+      window.location.hash = pageId;
+    }
+    
+    // Check URL hash on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      const hash = window.location.hash.substring(1);
+      if (hash && document.getElementById(hash)) {
+        showPage(hash);
+      } else {
+        showPage('home');
+      }
+    });
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        if (targetId !== '#') {
+          document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       });
     });
 
