@@ -147,12 +147,719 @@
     .hero {
       padding: 180px 0 100px;
       text-align: center;
-      background: linear-gradient(rg0, 0, 0, 0.3);
+      background: linear-gradient(rgba(10, 10, 42, 0.9), rgba(10, 10, 42, 0.9));
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 0, 200, 0.2) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.2) 0%, transparent 30%);
+      z-index: 1;
+    }
+    
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 1s ease;
+    }
+    
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--light-text);
+      font-size: 1.1rem;
+      animation: fadeIn 1.5s ease;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      margin: 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: var(--gradient);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    
+    .btn:hover::before {
+      width: 100%;
+    }
+    
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 0, 200, 0.4);
+      color: white;
+    }
+    
+    .btn-outline {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+    
+    .btn-outline:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
+    }
+    
+    /* Sections */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+    
+    /* About Section */
+    .about-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .about-card {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+      padding: 40px 30px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      transition: var(--transition);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
       border: 1px solid var(--border);
       backdrop-filter: blur(10px);
     }
     
-    .contact-icon {
+    .about-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
+    }
+    
+    .about-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid transparent;
+      background: var(--gradient) padding-box, var(--gradient) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+    
+    .mother-tribute {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto;
+      max-width: 900px;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .mother-tribute::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(255, 0, 200, 0.1) 0%, transparent 70%);
+      z-index: 0;
+    }
+    
+    .mother-tribute img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid transparent;
+      background: var(--gradient) padding-box, var(--gradient) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 1;
+      transition: var(--transition);
+    }
+    
+    .mother-tribute:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 0, 200, 0.4);
+    }
+    
+    .mother-tribute-content {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .mother-tribute p {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .mother-tribute .title {
+      font-size: 1.2rem;
+      color: var(--accent);
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    /* Artists Section */
+    .artists-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .artist-card {
+      width: 280px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+    
+    .artist-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+    
+    .artist-image-container {
+      position: relative;
+      overflow: hidden;
+      height: 350px;
+    }
+    
+    .artist-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .artist-card:hover .artist-image {
+      transform: scale(1.1);
+    }
+    
+    .artist-social {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .artist-card:hover .artist-social {
+      opacity: 1;
+    }
+    
+    .artist-social a {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .artist-social a:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
+    }
+    
+    .artist-info {
+      padding: 25px;
+      text-align: center;
+    }
+    
+    .artist-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .artist-name::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+    
+    .artist-bio {
+      color: var(--light-text);
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    
+    .artist-genre {
+      display: inline-block;
+      padding: 5px 15px;
+      background: rgba(0, 240, 255, 0.1);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+    
+    /* Releases Section */
+    .release-card {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    
+    .release-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
+    }
+    
+    .release-image {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .release-info {
+      padding: 30px;
+      flex: 1;
+    }
+    
+    .release-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .release-description {
+      color: var(--light-text);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .release-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    /* Footer */
+    footer {
+      background: rgba(10, 10, 42, 0.95);
+      color: var(--text);
+      padding: 60px 0 30px;
+      text-align: center;
+      position: relative;
+      border-top: 1px solid var(--border);
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--gradient);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .social-links a {
+      color: var(--light-text);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--light-text);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .email-link {
+      word-break: break-all;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .release-card {
+        flex-direction: column;
+      }
+      
+      .release-image {
+        width: 100%;
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .hero {
+        padding: 150px 0 80px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section {
+        padding: 80px 0;
+      }
+      
+      .about-card {
+        min-width: 100%;
+      }
+      
+      .mother-tribute {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .logo-full-name {
+        display: none;
+      }
+    }
+    
+    /* Floating elements animation */
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Glow effect */
+    .glow {
+      text-shadow: 0 0 10px rgba(255, 0, 200, 0.5), 0 0 20px rgba(255, 0, 200, 0.3);
+    }
+    
+    /* Page content styles */
+    .page-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .page-content.active {
+      display: block;
+    }
+    
+    /* Artist Slider */
+    .artist-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+    }
+    
+    .slider-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+    }
+    
+    .slide-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border: 4px solid transparent;
+      background: var(--gradient) padding-box, var(--gradient) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .slide-content {
+      text-align: center;
+      max-width: 600px;
+    }
+    
+    .slide-name {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .slide-bio {
+      color: var(--light-text);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .slide-genre {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(0, 240, 255, 0.1);
+      color: var(--accent);
+      border-radius: 25px;
+      font-weight: 600;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      margin-bottom: 25px;
+    }
+    
+    .slider-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .slider-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1.2rem;
+    }
+    
+    .slider-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
+    }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--light-text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+    
+    .youtube-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .youtube-icon a {
       width: 60px;
       height: 60px;
       background: var(--gradient);
@@ -160,39 +867,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
       transition: var(--transition);
       box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
     }
     
-    .contact-icon:hover {
+    .youtube-icon a:hover {
       transform: scale(1.1) translateY(-5px);
       box-shadow: 0 8px 20px rgba(255, 0, 200, 0.5);
     }
     
-    .contact-icon i {
+    .youtube-icon i {
       font-size: 28px;
       color: white;
-    }
-    
-    .contact-info {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .contact-info h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--accent);
-    }
-    
-    .contact-info p, .contact-info a {
-      color: var(--light-text);
-      font-size: 1rem;
-    }
-    
-    .contact-info a:hover {
-      color: var(--accent);
     }
   </style>
 </head>
@@ -503,34 +1189,19 @@
     <section class="section">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
-        
-        <div class="contact-container">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-info">
-              <h3>Email Us</h3>
-              <a href="mailto:officialnlmmusicgroupafrica@gmail.com">officialnlmmusicgroupafrica@gmail.com</a>
-            </div>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border); backdrop-filter: blur(10px);">
+          <p style="margin-bottom: 30px; color: var(--light-text);">
+            Have questions or want to work with us? Reach out via email or phone.
+          </p>
+          <div style="margin-bottom: 40px;">
+            <p style="margin-bottom: 15px;"><strong>Email:</strong> <a href="mailto:officialnlmmusicgroupafrica@gmail.com" class="email-link">officialnlmmusicgroupafrica@gmail.com</a></p>
+            <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/0813398293" style="color: var(--accent);">081 339 8293</a></p>
           </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="contact-info">
-              <h3>Call / WhatsApp</h3>
-              <a href="https://wa.me/0813398293">081 339 8293</a>
-            </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i> TikTok</a>
           </div>
-        </div>
-        
-        <div class="social-links contact-social">
-          <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook"></i> Facebook</a>
-          <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i> TikTok</a>
-          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp"><i class="fab fa-youtube"></i> YouTube</a>
         </div>
       </div>
     </section>
