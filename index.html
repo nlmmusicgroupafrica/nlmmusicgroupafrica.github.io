@@ -947,6 +947,59 @@
       transform: translateY(-5px) scale(1.1);
       box-shadow: 0 5px 15px rgba(255, 0, 200, 0.5);
     }
+
+    /* Music Platforms Section */
+    .music-platforms {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    
+    .platform-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      width: 200px;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    
+    .platform-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .platform-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+    
+    .platform-name {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    
+    .platform-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    
+    .platform-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -1076,14 +1129,14 @@
         <h2 class="section-title">Latest Releases</h2>
         
         <div class="release-card">
-          <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
+          <img src="7.PNG" alt="Evil Eye EE" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">Tomorrowland Anthems Album</h3>
+            <h3 class="release-title">Evil Eye EP</h3>
             <p class="release-description">
-              Brace yourself for a seismic clash of sounds—where Amapiano’s hypnotic grooves collide with EDM’s explosive drops!
+              A 6-track EP that merges the rich rhythms of Afro House with the deep, rolling basslines of Tech. Built for the dancefloor, it's a hypnotic journey—where percussive grooves meet dark, driving energy. Tight, powerful, and relentlessly rhythmic, this project showcases DoskiWaAfrika's signature sound: raw, spiritual, and made to move bodies.
             </p>
             <div class="release-links">
-              <a href="https://www.mediafire.com/file/cckwtg7vf4pel7c/I%27M_MusiQ_-_Tomorrowland_Anthems_Album.zip/file" class="btn btn-primary">Download Album</a>
+              <a href="https://www.mediafire.com/file/huacucugcqqmr77/DoskiWaAfrika_-_Evil_Eye_EP.zip/file" class="btn btn-primary">Download Album</a>
             </div>
           </div>
         </div>
@@ -1206,12 +1259,43 @@
           </a>
         </div>
         
+        <div class="music-platforms">
+          <div class="platform-card">
+            <div class="platform-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h4 class="platform-name">Beatport</h4>
+            <a href="https://www.beatport.com/label/nlm-music-group-africa/132995" class="platform-btn" target="_blank">Listen</a>
+          </div>
+          
+          <div class="platform-card">
+            <div class="platform-icon">
+              <i class="fas fa-compact-disc"></i>
+            </div>
+            <h4 class="platform-name">Traxsource</h4>
+            <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
+          </div>
+        </div>
+        
+        <div class="release-card">
+          <img src="7.PNG" alt="Evil Eye EP" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Evil Eye EP</h3>
+            <p class="release-description">
+              A 6-track EP that merges the rich rhythms of Afro House with the deep, rolling basslines of Tech. Built for the dancefloor, it's a hypnotic journey—where percussive grooves meet dark, driving energy. Tight, powerful, and relentlessly rhythmic, this project showcases DoskiWaAfrika's signature sound: raw, spiritual, and made to move bodies.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/huacucugcqqmr77/DoskiWaAfrika_-_Evil_Eye_EP.zip/file" class="btn btn-primary">Download Album</a>
+            </div>
+          </div>
+        </div>
+        
         <div class="release-card">
           <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
           <div class="release-info">
             <h3 class="release-title">Tomorrowland Anthems Album</h3>
             <p class="release-description">
-              Brace yourself for a seismic clash of sounds—where Amapiano’s hypnotic grooves collide with EDM’s explosive drops! Tomorrowland Anthems isn’t just a remix album; it’s a global dancefloor revolution. I'M MusiQ takes iconic festival bangers and injects them with Afro-house swagger, rewiring them with log-drum rhythms, shimmering synths, and basslines that hit like lightning.
+              Brace yourself for a seismic clash of sounds—where Amapiano's hypnotic grooves collide with EDM's explosive drops! Tomorrowland Anthems isn't just a remix album; it's a global dancefloor revolution. I'M MusiQ takes iconic festival bangers and injects them with Afro-house swagger, rewiring them with log-drum rhythms, shimmering synths, and basslines that hit like lightning.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/cckwtg7vf4pel7c/I%27M_MusiQ_-_Tomorrowland_Anthems_Album.zip/file" class="btn btn-primary">Download Album</a>
@@ -1283,13 +1367,6 @@
               <span>Call Us</span>
             </div>
           </div>
-          
-          <div class="icon-only" style="margin-top: 40px;">
-            <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp"><i class="fab fa-youtube"></i></a>
-          </div>
         </div>
       </div>
     </section>
@@ -1308,6 +1385,9 @@
         <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook-f"></i></a>
         <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp"><i class="fab fa-youtube"></i></a>
+        <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.beatport.com/label/nlm-music-group-africa/132995"><i class="fab fa-beatport"></i></a>
+        <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa"><i class="fas fa-compact-disc"></i></a>
       </div>
       <p style="margin-top: 30px; color: var(--light-text); font-size: 0.8rem;">
         &copy; 2025 NLM Music Group Africa. All rights reserved.
@@ -1410,7 +1490,7 @@
     }
     
     function startSlider() {
-      setInterval(nextSlide, 5000); // Change slide every 10 seconds
+      setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
   </script>
 </body>
