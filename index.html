@@ -1000,6 +1000,55 @@
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
     }
+    
+    /* Podcast Section */
+    .podcast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .podcast-card {
+      width: 280px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    
+    .podcast-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+    
+    .podcast-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .podcast-info {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .podcast-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    
+    .podcast-description {
+      color: var(--light-text);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
@@ -1016,6 +1065,7 @@
           <li><a href="#" onclick="showPage('about')">About</a></li>
           <li><a href="#" onclick="showPage('artists')">Artists</a></li>
           <li><a href="#" onclick="showPage('releases')">Music</a></li>
+          <li><a href="#" onclick="showPage('podcast')">Podcast</a></li>
           <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1054,6 +1104,29 @@
         
         <div style="text-align: center; margin-top: 40px;">
           <a href="#" class="btn btn-primary" onclick="showPage('about')">Learn More About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">NLM Podcast</h2>
+        
+        <div class="release-card">
+          <img src="14.png" alt="Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
+            <p class="release-description">
+              A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="btn btn-outline" onclick="showPage('podcast')">View All Podcasts</a>
         </div>
       </div>
     </section>
@@ -1140,20 +1213,7 @@
             </div>
           </div>
         </div>
-        
-        <div class="release-card">
-          <img src="14.png" alt="Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
-          <div class="release-info">
-            <h3 class="release-title">Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
-            <p class="release-description">
-             A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
-            </p>
-            <div class="release-links">
-              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
-            </div>
-          </div>
-        </div>
-        
+     
         <div style="text-align: center; margin-top: 40px;">
           <a href="#" class="btn btn-outline" onclick="showPage('releases')">View All Releases</a>
         </div>
@@ -1347,6 +1407,21 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Podcast Page -->
+  <div id="podcast" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Podcasts</h2>
+        
+        <div class="youtube-icon">
+          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
         
         <div class="release-card">
           <img src="14.png" alt="Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
@@ -1421,10 +1496,11 @@
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('artists')">Artists</a>
         <a href="#" onclick="showPage('releases')">Music</a>
+        <a href="#" onclick="showPage('podcast')">Podcast</a>
         <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="icon-only" style="margin: 30px 0;">
-        <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWHua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook-f"></i></a>
         <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp"><i class="fab fa-youtube"></i></a>
         <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
