@@ -116,7 +116,7 @@
     
     nav a {
       font-weight: 600;
-      font-size: 极.9rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--light-text);
@@ -131,7 +131,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--极radient);
+      background: var(--gradient);
       transition: var(--transition);
     }
     
@@ -179,14 +179,14 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       background: var(--gradient);
-      -webkit-background-cl极: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       animation: fadeInDown 1s ease;
     }
     
     .hero p {
-     极 max-width: 700px;
+      max-width: 700px;
       margin: 0 auto 30px;
       color: var(--light-text);
       font-size: 1.1rem;
@@ -210,7 +210,7 @@
       cursor: pointer;
     }
     
-    .极::before {
+    .btn::before {
       content: '';
       position: absolute;
       top: 0;
@@ -307,7 +307,7 @@
     
     .about-card:hover {
       transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 极.3), 0 0 20px rgba(255, 0, 200, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
     }
     
     .about-card img {
@@ -344,7 +344,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 极0%;
+      width: 100%;
       height: 100%;
       background: radial-gradient(circle at top right, rgba(255, 0, 200, 0.1) 0%, transparent 70%);
       z-index: 0;
@@ -407,7 +407,7 @@
       border-radius: 15px;
       overflow: hidden;
       transition: var(--transition);
-      box-shadow: 极 5px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
       border: 1px solid var(--border);
       backdrop-filter: blur(10px);
       position: relative;
@@ -506,7 +506,7 @@
     
     .artist-genre {
       display: inline-block;
-      padding: 5极 15px;
+      padding: 5px 15px;
       background: rgba(0, 240, 255, 0.1);
       color: var(--accent);
       border-radius: 20px;
@@ -562,7 +562,7 @@
     }
     
     .release-links {
-      display:极 flex;
+      display: flex;
       gap: 15px;
       margin-top: 30px;
     }
@@ -596,10 +596,10 @@
     
     .social-links a {
       color: var(--light-text);
-      font-weight: 极00;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-     极 font-size: 0.9rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -619,7 +619,7 @@
       flex-wrap: wrap;
     }
     
-    .footer极inks a {
+    .footer-links a {
       color: var(--light-text);
       font-size: 0.9rem;
       transition: var(--transition);
@@ -692,7 +692,7 @@
       }
       
       .section {
-        padding: 80px 极;
+        padding: 80px 0;
       }
       
       .about-card {
@@ -728,7 +728,7 @@
     /* Page content styles */
     .page-content {
       display: none;
-      animation: fade极 0.5s ease;
+      animation: fadeIn 0.5s ease;
     }
     
     .page-content.active {
@@ -743,7 +743,7 @@
       overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-     极 border: 1px solid var(--border);
+      border: 1px solid var(--border);
     }
     
     .slider-container {
@@ -771,7 +771,7 @@
       background: var(--gradient) padding-box, var(--gradient) border-box;
       background-origin: border-box;
       background-clip: padding-box, border-box;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 极.4);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     }
     
     .slide-content {
@@ -790,7 +790,7 @@
     
     .slide-bio {
       color: var(--light-text);
-      margin-bottom: 20极;
+      margin-bottom: 20px;
       line-height: 1.6;
     }
     
@@ -829,7 +829,7 @@
     
     .slider-btn:hover {
       transform: scale(1.1);
-      box-shadow: 0 5px 极5px rgba(255, 0, 200, 0.4);
+      box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
     }
     
     .slider-dots {
@@ -890,7 +890,7 @@
     }
     
     .contact-icon {
-      display:极 flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
       gap: 15px;
@@ -914,7 +914,7 @@
     .contact-icon a:hover {
       transform: translateY(-5px) scale(1.1);
       box-shadow: 0 8px 20px rgba(255, 0, 200, 0.5);
-极    }
+    }
     
     .contact-icon span {
       color: var(--light-text);
@@ -982,7 +982,7 @@
     .platform-name {
       font-weight: 700;
       margin-bottom: 10px;
-      color:极 var(--text);
+      color: var(--text);
     }
     
     .platform-btn {
@@ -1000,55 +1000,6 @@
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
     }
-    
-    /* Podcast Section */
-    .podcast-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .podcast-card {
-      width: 280px;
-      background: var(--card-bg);
-      border-radius: 15px;
-      overflow: hidden;
-      transition: var(--transition);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-    }
-    
-    .podcast-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 240, 255, 0.2);
-    }
-    
-    .podcast-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    
-    .podcast-info {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .podcast-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--accent);
-    }
-    
-    .podcast-description {
-      color: var(--light-text);
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
   </style>
 </head>
 <body>
@@ -1065,7 +1016,6 @@
           <li><a href="#" onclick="showPage('about')">About</a></li>
           <li><a href="#" onclick="showPage('artists')">Artists</a></li>
           <li><a href="#" onclick="showPage('releases')">Music</a></li>
-          <li><a href="#" onclick="showPage('podcast')">Podcast</a></li>
           <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1081,7 +1031,7 @@
           NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
         </p>
         <div>
-          <a href="#" class="极 btn-primary" onclick="showPage('artists')">Explore Artists</a>
+          <a href="#" class="btn btn-primary" onclick="showPage('artists')">Explore Artists</a>
           <a href="#" class="btn btn-outline" onclick="showPage('releases')">Check Music Releases</a>
         </div>
       </div>
@@ -1103,7 +1053,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="btn btn-primary" onclick="极howPage('about')">Learn More About Us</a>
+          <a href="#" class="btn btn-primary" onclick="showPage('about')">Learn More About Us</a>
         </div>
       </div>
     </section>
@@ -1151,13 +1101,13 @@
                 <h3 class="slide-name">Vutome</h3>
                 <p class="slide-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies.</p>
                 <span class="slide-genre">Deep House | Soulful House</span>
-              </极>
+              </div>
             </div>
           </div>
           
           <div class="slider-nav">
             <button class="slider-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider-btn" onclick="nextSlide()"><极 class="fas fa-chevron-right"></i></button>
+            <button class="slider-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
           </div>
           
           <div class="slider-dots">
@@ -1190,32 +1140,9 @@
             </div>
           </div>
         </div>
-     
+        
         <div style="text-align: center; margin-top: 40px;">
           <a href="#" class="btn btn-outline" onclick="showPage('releases')">View All Releases</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">NLM Podcast</h2>
-        
-        <div class="release-card">
-          <img src="14.png" alt="Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
-          <div class="release-info">
-            <h3 class="release-title">Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
-            <p class="release-description">
-              A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
-            </p>
-            <div class="release-links">
-              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
-            </div>
-          </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="btn btn-outline" onclick="showPage('podcast')">View All Podcasts</a>
         </div>
       </div>
     </section>
@@ -1224,16 +1151,16 @@
   <!-- About Page -->
   <div id="about" class="page-content">
     <section class="section">
-      <极 class="container">
+      <div class="container">
         <h2 class="section-title">About Us</h2>
-        <p style="text-align: center;极 max-width: 800px; margin: 0 auto 40px; color: var(--light-text);">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--light-text);">
           NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
         </p>
         
         <div class="mother-tribute floating">
           <img src="6.png" alt="Ntampose Lettia Maduna">
           <div class="mother-tribute-content">
-            <p>N极ampose Lettia Maduna</p>
+            <p>Ntampose Lettia Maduna</p>
             <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
           </div>
         </div>
@@ -1249,10 +1176,10 @@
             <h3>Head of Music (A&R)</h3>
             <p>Ailwei Maduna Wa Malada</p>
           </div>
-        </div>
+          
         
         <div style="max-width: 800px; margin: 60px auto 0; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border);">
-          <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent);">Our Mission</极>
+          <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent);">Our Mission</h3>
           <p style="color: var(--light-text); line-height: 1.8; text-align: center;">
             At NLM Music Group Africa, we are dedicated to discovering and nurturing African musical talent, providing a platform for artists to share their unique sounds with the world. We believe in the power of music to transcend boundaries and bring people together.
           </p>
@@ -1280,7 +1207,7 @@
           
           <div class="artist-card">
             <div class="artist-image-container">
-              <img src="9.png" alt="I'M Musi极" class="artist-image">
+              <img src="9.png" alt="I'M MusiQ" class="artist-image">
             </div>
             <div class="artist-info">
               <h3 class="artist-name">I'M MusiQ</h3>
@@ -1290,7 +1217,7 @@
           </div>
           
           <div class="artist-card">
-            <div class极="artist-image-container">
+            <div class="artist-image-container">
               <img src="11.png" alt="T.fly deDeejay" class="artist-image">
             </div>
             <div class="artist-info">
@@ -1322,7 +1249,7 @@
         <h2 class="section-title">Music</h2>
         
         <div class="youtube-icon">
-          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4极ZwRt2xOzQVp" target="_blank">
+          <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" target="_blank">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
@@ -1343,14 +1270,7 @@
             <h4 class="platform-name">Traxsource</h4>
             <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
           </div>
-          
-          <div class="platform-card">
-            <div class="platform-icon">
-              <i class="fas fa-headphones"></i>
-            </div>
-            <h4 class="platform-name">Volumo</h4>
-            <a href="https://volumo.com/label/849271-nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
-          </div>
+          https://volumo.com/label/849271-nlm-music-group-africa
         </div>
         
         <div class="release-card">
@@ -1358,7 +1278,7 @@
           <div class="release-info">
             <h3 class="release-title">Evil Eye EP</h3>
             <p class="release-description">
-              A 6-track EP that merges the rich rhythms of Afro House with the deep, rolling basslines of Tech. Built for the dancefloor, it's a hypnotic journey—where percussive grooves meet dark, driving energy. Tight, powerful, and relentlessly rhythmic, this project showcases DoskiWaAfrika's signature sound: raw, spiritual极 and made to move bodies.
+              A 6-track EP that merges the rich rhythms of Afro House with the deep, rolling basslines of Tech. Built for the dancefloor, it's a hypnotic journey—where percussive grooves meet dark, driving energy. Tight, powerful, and relentlessly rhythmic, this project showcases DoskiWaAfrika's signature sound: raw, spiritual, and made to move bodies.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/huacucugcqqmr77/DoskiWaAfrika_-_Evil_Eye_EP.zip/file" class="btn btn-primary">Download Album</a>
@@ -1367,7 +1287,7 @@
         </div>
         
         <div class="release-card">
-          <img src极="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
+          <img src="12.jpg" alt="Tomorrowland Anthems Album" class="release-image">
           <div class="release-info">
             <h3 class="release-title">Tomorrowland Anthems Album</h3>
             <p class="release-description">
@@ -1387,8 +1307,8 @@
               DoskiWaAfrika cements his legacy with The King Of Drum Tech Vol 02, a full-length album that expands the boundaries of Afro House and Drum Tech. Building on the raw energy of Vol 01, this project delivers a deeper, more immersive journey—packed with hypnotic rhythms, tribal intensity, and the gritty underground sound that has become DoskiWaAfrika's signature.
             </p>
             <div class="release-links">
-              <a href="https://www.mediafire.com/file/5hd7lj2极m9vy7g9/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_02_Album.zip/file" class="btn btn-primary">Download Album</a>
-            </极>
+              <a href="https://www.mediafire.com/file/5hd7lj2cm9vy7g9/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_02_Album.zip/file" class="btn btn-primary">Download Album</a>
+            </div>
           </div>
         </div>
         
@@ -1400,10 +1320,10 @@
               DoskiWaAfrika steps into the spotlight with "The King Of Drum Tech Vol 01", a bootleg EP that showcases his raw and uncompromising take on Afro House and Drum Tech. Packed with hypnotic rhythms, deep tribal energy, and authentic underground flair, this collection reimagines sounds from the streets of Africa to the dance floors of the world.
             </p>
             <p class="release-description">
-              This unofficial drop is a tribute to the pulse极 Drum Tech culture, blending signature percussion with gritty edits and soulful echoes. Though not commercially released, this EP stands as a bold artistic statement from a rising voice in the scene.
+              This unofficial drop is a tribute to the pulse of Drum Tech culture, blending signature percussion with gritty edits and soulful echoes. Though not commercially released, this EP stands as a bold artistic statement from a rising voice in the scene.
             </p>
             <div class="release-links">
-              <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_极ol_01_EP.zip/file" class="btn btn-primary">Download EP</a>
+              <a href="https://www.mediafire.com/file/wlv9tqs3ullibd2/DoskiWaAfrika_-_King_Of_Drum_Tech_Vol_01_EP.zip/file" class="btn btn-primary">Download EP</a>
             </div>
           </div>
         </div>
@@ -1411,53 +1331,50 @@
     </section>
   </div>
 
-  <!-- Podcast Page -->
-  <div id="podcast" class="page-content">
+ <!-- Podcast Page -->
+  <div id="Podcast" class="page-content">
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Podcasts</h2>
+        <h2 class="section-title">Podcast</h2>
         
         <div class="youtube-icon">
           <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" target="_blank">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
-        
-        <div class="release-card">
-          <img src="14.png" alt="Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
+<div class="release-card">
+          <img src="14.png" alt="
+Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
+            <h3 class="release-title">
+Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
             <p class="release-description">
-              A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
+            A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
             </p>
             <div class="release-links">
-              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_极f_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
+              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
             </div>
           </div>
-        </div>
-        
-        <div class="release-card">
-          <img src="15.png" alt="NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika" class="release-image">
+<div class="release-card">
+          <img src="15.png" alt="
+NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
+            <h3 class="release-title">
+NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
             <p class="release-description">
-              Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.         
+ Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.         
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/ph3ih49gnn0h79v/NLM_Music_Group_Africa_Episode_01_Mixed_By_DoskiWaAfrika.mp3/file" class="btn btn-primary">Download Mix</a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </div>
 
   <!-- Contact Page -->
   <div id="contact" class="page-content">
     <section class="section">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
-        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1极 solid var(--border); backdrop-filter: blur(10px);">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border); backdrop-filter: blur(10px);">
           <p style="margin-bottom: 30px; color: var(--light-text);">
             Have questions or want to work with us? Reach out via email or phone.
           </p>
@@ -1496,17 +1413,16 @@
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('artists')">Artists</a>
         <a href="#" onclick="showPage('releases')">Music</a>
-        <a href="#" onclick="showPage('podcast')">Podcast</a>
         <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="icon-only" style="margin: 30px 0;">
-        <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWHua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ=="><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61576555839706"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10极4PZwRt2xOzQVp"><i class="fab fa-youtube"></i></a>
-        <a href="极ttps://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp"><i class="fab fa-youtube"></i></a>
+        <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
         <a href="https://www.beatport.com/label/nlm-music-group-africa/132995"><i class="fab fa-beatport"></i></a>
         <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa"><i class="fas fa-compact-disc"></i></a>
-        <a href="https://volumo.com/label/849271-nlm-music-group-africa"><i class="fas fa-headphones"></i></a>
+ https://volumo.com/label/849271-nlm-music-group-africa
       </div>
       <p style="margin-top: 30px; color: var(--light-text); font-size: 0.8rem;">
         &copy; 2025 NLM Music Group Africa. All rights reserved.
