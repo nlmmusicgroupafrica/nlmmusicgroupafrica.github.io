@@ -777,6 +777,7 @@
     .slide-content {
       text-align: center;
       max-width: 600px;
+      margin: 0 auto;
     }
     
     .slide-name {
@@ -1016,6 +1017,7 @@
           <li><a href="#" onclick="showPage('about')">About</a></li>
           <li><a href="#" onclick="showPage('artists')">Artists</a></li>
           <li><a href="#" onclick="showPage('releases')">Music</a></li>
+          <li><a href="#" onclick="showPage('podcast')">Podcast</a></li>
           <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1060,7 +1062,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Artist</h2>
+        <h2 class="section-title">Artists</h2>
         
         <div class="artist-slider">
           <div class="slider-container" id="slider-container">
@@ -1146,6 +1148,30 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">NLM Podcast</h2>
+        
+        <div class="release-card">
+          <img src="14.png" alt="Motivated By My Thoughts Vol 26" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Motivated By My Thoughts Vol 26 (Session Of Good Music)</h3>
+            <p class="release-description">
+              A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
+              <a href="#" class="btn btn-outline" onclick="showPage('podcast')">More Podcasts</a>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="btn btn-primary" onclick="showPage('podcast')">View All Podcasts</a>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- About Page -->
@@ -1176,7 +1202,7 @@
             <h3>Head of Music (A&R)</h3>
             <p>Ailwei Maduna Wa Malada</p>
           </div>
-          
+        </div>
         
         <div style="max-width: 800px; margin: 60px auto 0; background: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); border: 1px solid var(--border);">
           <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent);">Our Mission</h3>
@@ -1270,7 +1296,14 @@
             <h4 class="platform-name">Traxsource</h4>
             <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
           </div>
-          https://volumo.com/label/849271-nlm-music-group-africa
+          
+          <div class="platform-card">
+            <div class="platform-icon">
+              <i class="fas fa-headphones"></i>
+            </div>
+            <h4 class="platform-name">Volumo</h4>
+            <a href="https://volumo.com/label/849271-nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
+          </div>
         </div>
         
         <div class="release-card">
@@ -1331,43 +1364,46 @@
     </section>
   </div>
 
- <!-- Podcast Page -->
-  <div id="Podcast" class="page-content">
+  <!-- Podcast Page -->
+  <div id="podcast" class="page-content">
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Podcast</h2>
+        <h2 class="section-title">NLM Podcast</h2>
         
         <div class="youtube-icon">
           <a href="https://youtube.com/@nlmmusicgroup_africa?si=10d4PZwRt2xOzQVp" target="_blank">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
-<div class="release-card">
-          <img src="14.png" alt="
-Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome" class="release-image">
+        
+        <div class="release-card">
+          <img src="14.png" alt="Motivated By My Thoughts Vol 26 (Session Of Good Music) Mixed By Vutome" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">
-Motivated By My Thoughts Vol 26(Session Of Good Music) Mixed By Vutome</h3>
+            <h3 class="release-title">Motivated By My Thoughts Vol 26 (Session Of Good Music) Mixed By Vutome</h3>
             <p class="release-description">
-            A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
+              A contemplative and immersive deep house journey, mixed by Vutome. This session is designed to be the perfect soundtrack for introspection and getting lost in the moment, driven by smooth, melodic grooves and a hypnotic atmosphere. Let the soundscape motivate your thoughts and carry you away.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/rlg2zi1jd1gie30/Motivated_By_My_Thoughts_Vol_26%2528Session_Of_Good_Music%2529_Mixed_By_Vutome.mp3/file" class="btn btn-primary">Download Mix</a>
             </div>
           </div>
-<div class="release-card">
-          <img src="15.png" alt="
-NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika" class="release-image">
+        </div>
+        
+        <div class="release-card">
+          <img src="15.png" alt="NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">
-NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
+            <h3 class="release-title">NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
             <p class="release-description">
- Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.         
+              Dive into the first electrifying episode of NLM Music Group Africa, expertly mixed by DoskiWaAfrika! This music podcast takes you on a hypnotic journey through pulsating Deep Tech, soulful Afro House, groovy 3-Step, and immersive Deep House rhythms.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/ph3ih49gnn0h79v/NLM_Music_Group_Africa_Episode_01_Mixed_By_DoskiWaAfrika.mp3/file" class="btn btn-primary">Download Mix</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- Contact Page -->
   <div id="contact" class="page-content">
@@ -1413,6 +1449,7 @@ NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('artists')">Artists</a>
         <a href="#" onclick="showPage('releases')">Music</a>
+        <a href="#" onclick="showPage('podcast')">Podcast</a>
         <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="icon-only" style="margin: 30px 0;">
@@ -1422,7 +1459,7 @@ NLM Music Group Africa Episode 01 Mixed By DoskiWaAfrika</h3>
         <a href="https://vm.tiktok.com/ZMAeqmuEh/"><i class="fab fa-tiktok"></i></a>
         <a href="https://www.beatport.com/label/nlm-music-group-africa/132995"><i class="fab fa-beatport"></i></a>
         <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa"><i class="fas fa-compact-disc"></i></a>
- https://volumo.com/label/849271-nlm-music-group-africa
+        <a href="https://volumo.com/label/849271-nlm-music-group-africa"><i class="fas fa-headphones"></i></a>
       </div>
       <p style="margin-top: 30px; color: var(--light-text); font-size: 0.8rem;">
         &copy; 2025 NLM Music Group Africa. All rights reserved.
