@@ -34,9 +34,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const targetId = this.getAttribute('href');
     if (targetId !== '#') {
-      document.querySelector(targetId).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     }
   });
 });
@@ -46,7 +49,7 @@ window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
   if (window.scrollY > 100) {
     header.style.padding = '10px 0';
-    header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3';
+    header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
   } else {
     header.style.padding = '15px 0';
     header.style.boxShadow = 'none';
@@ -68,7 +71,9 @@ const dots = document.querySelectorAll('.dot');
 const slider = document.getElementById('slider-container');
 
 function updateSlider() {
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  if (slider) {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
   
   // Update dots
   dots.forEach((dot, index) => {
@@ -77,20 +82,37 @@ function updateSlider() {
 }
 
 function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlider();
+  if (slides.length > 0) {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlider();
+  }
 }
 
 function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateSlider();
+  if (slides.length > 0) {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
 }
 
 function goToSlide(index) {
-  currentSlide = index;
-  updateSlider();
+  if (index >= 0 && index < slides.length) {
+    currentSlide = index;
+    updateSlider();
+  }
 }
 
 function startSlider() {
-  setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  if (slides.length > 0) {
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  }
 }
+
+// Prevent default behavior for all navigation links
+document.querySelectorAll('nav a, .btn').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.getAttribute('href') === '#') {
+      e.preventDefault();
+    }
+  });
+});
