@@ -965,3 +965,20 @@ footer::before {
   font-weight: bold;
   text-align: center;
 }
+/* REMOVE ANY GRAYSCALE FILTERS - ADD THIS AT THE END OF YOUR CSS */
+body,
+html,
+header,
+section,
+div,
+img {
+    filter: grayscale(0) !important;
+    -webkit-filter: grayscale(0) !important;
+    -moz-filter: grayscale(0) !important;
+}
+
+/* Ensure colors are displaying properly */
+* {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
