@@ -82,13 +82,20 @@ header {
   position: relative;
 }
 
-.logo img {
+.logo-placeholder {
+  width: 40px;
   height: 40px;
-  transition: var(--transition);
-  filter: drop-shadow(0 0 5px rgba(255, 0, 200, 0.5));
+  background: var(--gradient);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.logo:hover img {
+.logo:hover .logo-placeholder {
   transform: rotate(10deg) scale(1.1);
 }
 
@@ -301,16 +308,27 @@ nav a:hover::after {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 200, 0.2);
 }
 
-.about-card img {
+.image-placeholder {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  background: var(--gradient);
   margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
   border: 3px solid transparent;
   background: var(--gradient) padding-box, var(--gradient) border-box;
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+.image-placeholder.small {
+  width: 100px;
+  height: 100px;
+  font-size: 0.9rem;
 }
 
 .mother-tribute {
@@ -341,22 +359,17 @@ nav a:hover::after {
   z-index: 0;
 }
 
-.mother-tribute img {
+.mother-tribute .image-placeholder {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid transparent;
-  background: var(--gradient) padding-box, var(--gradient) border-box;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  font-size: 1.2rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 1;
   transition: var(--transition);
 }
 
-.mother-tribute:hover img {
+.mother-tribute:hover .image-placeholder {
   transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(255, 0, 200, 0.4);
 }
@@ -418,46 +431,18 @@ nav a:hover::after {
 .artist-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
   transition: var(--transition);
 }
 
 .artist-card:hover .artist-image {
   transform: scale(1.1);
-}
-
-.artist-social {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.artist-card:hover .artist-social {
-  opacity: 1;
-}
-
-.artist-social a {
-  width: 40px;
-  height: 40px;
-  background: var(--gradient);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.artist-social a:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 5px 15px rgba(255, 0, 200, 0.4);
 }
 
 .artist-info {
@@ -527,8 +512,14 @@ nav a:hover::after {
 
 .release-image {
   width: 300px;
-  height: auto;
-  object-fit: cover;
+  height: 300px;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .release-info {
@@ -578,30 +569,6 @@ footer::before {
   background: var(--gradient);
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 30px 0;
-}
-
-.social-links a {
-  color: var(--light-text);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition);
-}
-
-.social-links a:hover {
-  color: var(--accent);
-  transform: translateY(-3px);
-}
-
 .footer-links {
   display: flex;
   justify-content: center;
@@ -619,12 +586,6 @@ footer::before {
 .footer-links a:hover {
   color: var(--accent);
   transform: translateY(-3px);
-}
-
-.email-link {
-  word-break: break-all;
-  color: var(--accent);
-  font-weight: 600;
 }
 
 /* Animations */
@@ -711,11 +672,6 @@ footer::before {
   100% { transform: translateY(0px); }
 }
 
-/* Glow effect */
-.glow {
-  text-shadow: 0 0 10px rgba(255, 0, 200, 0.5), 0 0 20px rgba(255, 0, 200, 0.3);
-}
-
 /* Page content styles */
 .page-content {
   display: none;
@@ -756,8 +712,14 @@ footer::before {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  object-fit: cover;
+  background: var(--gradient);
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
   border: 4px solid transparent;
   background: var(--gradient) padding-box, var(--gradient) border-box;
   background-origin: border-box;
@@ -991,4 +953,15 @@ footer::before {
 .platform-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(255, 0, 200, 0.3);
+}
+
+/* Placeholder styles */
+.placeholder {
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
