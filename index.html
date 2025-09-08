@@ -11,18 +11,18 @@
 <body>
   <header>
     <div class="container header-container">
-      <a href="#" class="logo" onclick="showPage('home')">
-        <img src="logo.png" alt="NLM Music Group Africa">
+      <a href="#" class="logo" onclick="showPage('home'); return false;">
+        <div class="logo-placeholder">NLM</div>
         <span>NLM</span>
         <span class="logo-full-name">Music Group Africa</span>
       </a>
       <nav>
         <ul>
-          <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" onclick="showPage('about')">About</a></li>
-          <li><a href="#" onclick="showPage('artists')">Artists</a></li>
-          <li><a href="#" onclick="showPage('releases')">Music</a></li>
-          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+          <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+          <li><a href="#" onclick="showPage('artists'); return false;">Artists</a></li>
+          <li><a href="#" onclick="showPage('releases'); return false;">Music</a></li>
+          <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -37,8 +37,8 @@
           NLM Music Group Africa was founded in 2025 by visionary music entrepreneur <strong>Ailwei Maduna Wa Malada</strong>, who named the label after his mother, <strong>Ntampose Lettia Maduna</strong>.
         </p>
         <div>
-          <a href="#" class="btn btn-primary" onclick="showPage('artists')">Explore Artists</a>
-          <a href="#" class="btn btn-outline" onclick="showPage('releases')">Check Music Releases</a>
+          <a href="#" class="btn btn-primary" onclick="showPage('artists'); return false;">Explore Artists</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('releases'); return false;">Check Music Releases</a>
         </div>
       </div>
     </section>
@@ -51,7 +51,7 @@
         </p>
         
         <div class="mother-tribute floating">
-          <img src="6.png" alt="Ntampose Lettia Maduna">
+          <div class="image-placeholder">Mother's Photo</div>
           <div class="mother-tribute-content">
             <p>Ntampose Lettia Maduna</p>
             <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
@@ -59,7 +59,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="btn btn-primary" onclick="showPage('about')">Learn More About Us</a>
+          <a href="#" class="btn btn-primary" onclick="showPage('about'); return false;">Learn More About Us</a>
         </div>
       </div>
     </section>
@@ -72,7 +72,7 @@
           <div class="slider-container" id="slider-container">
             <!-- Slide 1 -->
             <div class="slide">
-              <img src="8.png" alt="DoskiWaAfrika" class="slide-image">
+              <div class="slide-image placeholder">DoskiWaAfrika</div>
               <div class="slide-content">
                 <h3 class="slide-name">DoskiWaAfrika</h3>
                 <p class="slide-bio">An upcoming Afro and Deep House DJ/Producer from Koster, North-West, South Africa. Known for blending rich African rhythms with deep, emotive house grooves that move both hearts and feet.</p>
@@ -82,7 +82,7 @@
             
             <!-- Slide 2 -->
             <div class="slide">
-              <img src="9.png" alt="I'M MusiQ" class="slide-image">
+              <div class="slide-image placeholder">I'M MusiQ</div>
               <div class="slide-content">
                 <h3 class="slide-name">I'M MusiQ</h3>
                 <p class="slide-bio">A genre-blending artist merging classical piano with high-energy EDM. His sound combines emotive melodies and powerful electronic beats, creating a unique fusion of elegance and intensity.</p>
@@ -92,7 +92,7 @@
             
             <!-- Slide 3 -->
             <div class="slide">
-              <img src="11.png" alt="T.fly deDeejay" class="slide-image">
+              <div class="slide-image placeholder">T.fly deDeejay</div>
               <div class="slide-content">
                 <h3 class="slide-name">T.fly deDeejay</h3>
                 <p class="slide-bio">A dynamic DJ and producer specializing in Progressive House and Afro House, crafting hypnotic grooves that blend deep rhythms with soulful, dance-driven energy.</p>
@@ -102,7 +102,7 @@
             
             <!-- Slide 4 -->
             <div class="slide">
-              <img src="13.png" alt="Vutome" class="slide-image">
+              <div class="slide-image placeholder">Vutome</div>
               <div class="slide-content">
                 <h3 class="slide-name">Vutome</h3>
                 <p class="slide-bio">Vutome is a DJ dedicated to the deeper side of house music. His sound is a focused exploration of soulful grooves, warm basslines, and atmospheric melodies.</p>
@@ -125,7 +125,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="btn btn-primary" onclick="showPage('artists')">View All Artists</a>
+          <a href="#" class="btn btn-primary" onclick="showPage('artists'); return false;">View All Artists</a>
         </div>
       </div>
     </section>
@@ -135,7 +135,7 @@
         <h2 class="section-title">Latest Releases</h2>
         
         <div class="release-card">
-          <img src="7.png" alt="Evil Eye EP" class="release-image">
+          <div class="release-image placeholder">Evil Eye EP</div>
           <div class="release-info">
             <h3 class="release-title">Evil Eye EP</h3>
             <p class="release-description">
@@ -148,7 +148,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="btn btn-outline" onclick="showPage('releases')">View All Releases</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('releases'); return false;">View All Releases</a>
         </div>
       </div>
     </section>
@@ -164,7 +164,7 @@
         </p>
         
         <div class="mother-tribute floating">
-          <img src="6.png" alt="Ntampose Lettia Maduna">
+          <div class="image-placeholder">Mother's Photo</div>
           <div class="mother-tribute-content">
             <p>Ntampose Lettia Maduna</p>
             <div class="title">Inspiring Force Behind NLM Music Group Africa</div>
@@ -173,12 +173,12 @@
         
         <div class="about-container">
           <div class="about-card floating">
-            <img src="founder.png" alt="Founder">
+            <div class="image-placeholder small">Founder</div>
             <h3>Founder</h3>
             <p>Ailwei Maduna Wa Malada</p>
           </div>
           <div class="about-card floating">
-            <img src="ar.png" alt="Head of A&R">
+            <div class="image-placeholder small">A&R</div>
             <h3>Head of Music (A&R)</h3>
             <p>Ailwei Maduna Wa Malada</p>
           </div>
@@ -202,7 +202,7 @@
         <div class="artists-container">
           <div class="artist-card">
             <div class="artist-image-container">
-              <img src="8.png" alt="DoskiWaAfrika" class="artist-image">
+              <div class="artist-image placeholder">DoskiWaAfrika</div>
             </div>
             <div class="artist-info">
               <h3 class="artist-name">DoskiWaAfrika</h3>
@@ -213,7 +213,7 @@
           
           <div class="artist-card">
             <div class="artist-image-container">
-              <img src="9.png" alt="I'M MusiQ" class="artist-image">
+              <div class="artist-image placeholder">I'M MusiQ</div>
             </div>
             <div class="artist-info">
               <h3 class="artist-name">I'M MusiQ</h3>
@@ -224,7 +224,7 @@
           
           <div class="artist-card">
             <div class="artist-image-container">
-              <img src="11.png" alt="T.fly deDeejay" class="artist-image">
+              <div class="artist-image placeholder">T.fly deDeejay</div>
             </div>
             <div class="artist-info">
               <h3 class="artist-name">T.fly deDeejay</h3>
@@ -235,7 +235,7 @@
           
           <div class="artist-card">
             <div class="artist-image-container">
-              <img src="13.png" alt="Vutome" class="artist-image">
+              <div class="artist-image placeholder">Vutome</div>
             </div>
             <div class="artist-info">
               <h3 class="artist-name">Vutome</h3>
@@ -287,7 +287,7 @@
         </div>
         
         <div class="release-card">
-          <img src="7.png" alt="Evil Eye EP" class="release-image">
+          <div class="release-image placeholder">Evil Eye EP</div>
           <div class="release-info">
             <h3 class="release-title">Evil Eye EP</h3>
             <p class="release-description">
@@ -342,11 +342,11 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('about')">About</a>
-        <a href="#" onclick="showPage('artists')">Artists</a>
-        <a href="#" onclick="showPage('releases')">Music</a>
-        <a href="#" onclick="showPage('contact')">Contact</a>
+        <a href="#" onclick="showPage('home'); return false;">Home</a>
+        <a href="#" onclick="showPage('about'); return false;">About</a>
+        <a href="#" onclick="showPage('artists'); return false;">Artists</a>
+        <a href="#" onclick="showPage('releases'); return false;">Music</a>
+        <a href="#" onclick="showPage('contact'); return false;">Contact</a>
       </div>
       <div class="icon-only" style="margin: 30px 0;">
         <a href="https://www.instagram.com/nlmmusicgroupafrica/profilecard/?igsh=MWtpaWhua3l1ZG1weQ==" target="_blank"><i class="fab fa-instagram"></i></a>
