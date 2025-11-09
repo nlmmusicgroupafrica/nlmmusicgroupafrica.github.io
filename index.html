@@ -1001,6 +1001,235 @@
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
     }
+    
+    /* Merch Section */
+    .merch-category {
+      margin-bottom: 80px;
+    }
+    
+    .merch-category-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    
+    .merch-category-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+    
+    .merch-item {
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      margin-bottom: 40px;
+    }
+    
+    .merch-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(187, 134, 252, 0.2);
+    }
+    
+    .merch-item-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      text-align: center;
+      padding: 20px 20px 0;
+      color: var(--accent);
+    }
+    
+    .merch-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 0 20px 20px;
+    }
+    
+    .merch-slider-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .merch-slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .merch-slide img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: var(--transition);
+    }
+    
+    .merch-slide img:hover {
+      transform: scale(1.03);
+    }
+    
+    .merch-slide-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .merch-slide-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .merch-slide-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+    }
+    
+    .merch-slide-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .merch-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--light-text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .merch-dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+    
+    .merch-details {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .merch-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+    
+    .merch-description {
+      color: var(--light-text);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .merch-order {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .merch-order-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 25px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+    }
+    
+    .merch-order-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(29, 185, 84, 0.4);
+    }
+    
+    .merch-order-note {
+      color: var(--light-text);
+      font-size: 0.9rem;
+    }
+    
+    .merch-colors {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .color-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .color-option:hover {
+      transform: translateY(-5px);
+    }
+    
+    .color-swatch {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--border);
+      transition: var(--transition);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .color-swatch.active {
+      border-color: var(--accent);
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+    }
+    
+    .color-name {
+      font-size: 0.8rem;
+      color: var(--light-text);
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -1017,6 +1246,7 @@
           <li><a href="#" onclick="showPage('about')">About</a></li>
           <li><a href="#" onclick="showPage('artists')">Artists</a></li>
           <li><a href="#" onclick="showPage('releases')">Music</a></li>
+          <li><a href="#" onclick="showPage('merch')">Merch</a></li>
           <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1333,6 +1563,107 @@
     </section>
   </div>
 
+  <!-- Merch Page -->
+  <div id="merch" class="page-content">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Merch</h2>
+        
+        <div class="merch-category">
+          <h3 class="merch-category-title">HATS</h3>
+          
+          <div class="merch-item">
+            <h4 class="merch-item-title">Bucket Hat With Drawcord</h4>
+            
+            <div class="merch-colors">
+              <div class="color-option" onclick="changeHatColor('green')">
+                <div class="color-swatch active" style="background-color: #2E8B57;"></div>
+                <div class="color-name">Green</div>
+              </div>
+              <div class="color-option" onclick="changeHatColor('navy')">
+                <div class="color-swatch" style="background-color: #000080;"></div>
+                <div class="color-name">Navy Blue</div>
+              </div>
+              <div class="color-option" onclick="changeHatColor('grey')">
+                <div class="color-swatch" style="background-color: #808080;"></div>
+                <div class="color-name">Grey</div>
+              </div>
+              <div class="color-option" onclick="changeHatColor('khaki')">
+                <div class="color-swatch" style="background-color: #F0E68C;"></div>
+                <div class="color-name">Khaki</div>
+              </div>
+            </div>
+            
+            <div class="merch-slider">
+              <div class="merch-slider-container" id="hat-slider">
+                <div class="merch-slide">
+                  <img src="12.png" alt="Green Bucket Hat" id="hat-image">
+                </div>
+              </div>
+            </div>
+            
+            <div class="merch-details">
+              <div class="merch-price">R149.99</div>
+              <p class="merch-description">
+                Premium quality bucket hat with adjustable drawcord for the perfect fit. Made from durable, breathable fabric with embroidered NLM logo. Perfect for festivals, beach days, or everyday style.
+              </p>
+              
+              <div class="merch-order">
+                <a href="https://wa.me/0813398293?text=Hi,%20I%20would%20like%20to%20order%20a%20Bucket%20Hat%20with%20Drawcord" class="merch-order-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+                <div class="merch-order-note">081 339 8293</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="merch-category">
+          <h3 class="merch-category-title">T-SHIRTS</h3>
+          
+          <div class="merch-item">
+            <h4 class="merch-item-title">Striped Polo Shirt</h4>
+            
+            <div class="merch-slider">
+              <div class="merch-slider-container" id="shirt-slider">
+                <div class="merch-slide">
+                  <img src="17.jpg" alt="Striped Polo Shirt Front">
+                </div>
+                <div class="merch-slide">
+                  <img src="18.jpg" alt="Striped Polo Shirt Back">
+                </div>
+              </div>
+              
+              <div class="merch-slide-nav">
+                <button class="merch-slide-btn" onclick="prevShirtSlide()"><i class="fas fa-chevron-left"></i></button>
+                <button class="merch-slide-btn" onclick="nextShirtSlide()"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              
+              <div class="merch-slide-dots">
+                <span class="merch-dot active" onclick="goToShirtSlide(0)"></span>
+                <span class="merch-dot" onclick="goToShirtSlide(1)"></span>
+              </div>
+            </div>
+            
+            <div class="merch-details">
+              <div class="merch-price">R339.99</div>
+              <p class="merch-description">
+                Premium quality striped polo shirt with embroidered NLM logo. Made from comfortable, breathable cotton blend fabric. Perfect for casual outings, events, or showing your NLM pride.
+              </p>
+              
+              <div class="merch-order">
+                <a href="https://wa.me/0813398293?text=Hi,%20I%20would%20like%20to%20order%20a%20Striped%20Polo%20Shirt" class="merch-order-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+                <div class="merch-order-note">081 339 8293</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <!-- Contact Page -->
   <div id="contact" class="page-content">
     <section class="section">
@@ -1377,6 +1708,7 @@
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('artists')">Artists</a>
         <a href="#" onclick="showPage('releases')">Music</a>
+        <a href="#" onclick="showPage('merch')">Merch</a>
         <a href="#" onclick="showPage('contact')">Contact</a>
       </div>
       <div class="icon-only" style="margin: 30px 0;">
@@ -1483,6 +1815,64 @@
     function goToSlide(index) {
       currentSlide = index;
       updateSlider();
+    }
+    
+    // Merch Slider Functionality
+    let currentShirtSlide = 0;
+    const shirtSlides = document.querySelectorAll('#shirt-slider .merch-slide');
+    const shirtDots = document.querySelectorAll('#shirt-slider ~ .merch-slide-dots .merch-dot');
+    const shirtSlider = document.getElementById('shirt-slider');
+    
+    function updateShirtSlider() {
+      shirtSlider.style.transform = `translateX(-${currentShirtSlide * 100}%)`;
+      
+      // Update dots
+      shirtDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentShirtSlide);
+      });
+    }
+    
+    function nextShirtSlide() {
+      currentShirtSlide = (currentShirtSlide + 1) % shirtSlides.length;
+      updateShirtSlider();
+    }
+    
+    function prevShirtSlide() {
+      currentShirtSlide = (currentShirtSlide - 1 + shirtSlides.length) % shirtSlides.length;
+      updateShirtSlider();
+    }
+    
+    function goToShirtSlide(index) {
+      currentShirtSlide = index;
+      updateShirtSlider();
+    }
+    
+    // Hat Color Changer
+    function changeHatColor(color) {
+      const hatImage = document.getElementById('hat-image');
+      const colorSwatches = document.querySelectorAll('.color-swatch');
+      
+      // Update active color swatch
+      colorSwatches.forEach(swatch => {
+        swatch.classList.remove('active');
+      });
+      event.currentTarget.querySelector('.color-swatch').classList.add('active');
+      
+      // Change hat image based on color
+      switch(color) {
+        case 'green':
+          hatImage.src = '12.png';
+          break;
+        case 'navy':
+          hatImage.src = '14.png';
+          break;
+        case 'grey':
+          hatImage.src = '15.png';
+          break;
+        case 'khaki':
+          hatImage.src = '16.png';
+          break;
+      }
     }
   </script>
 </body>
