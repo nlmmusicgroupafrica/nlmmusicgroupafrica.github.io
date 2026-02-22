@@ -7,18 +7,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* African-inspired professional palette */
     :root {
-      --primary: #0A0A0A;
-      --secondary: #1A1A1A;
-      --accent: #1DB954;
-      --accent-dark: #1AA34A;
-      --text: #FFFFFF;
-      --text-light: #E0E0E0;
-      --text-muted: #A0A0A0;
-      --border: rgba(255, 255, 255, 0.1);
-      --card-bg: rgba(26, 26, 26, 0.8);
+      --primary: #1E1A17;        /* deep charcoal brown */
+      --secondary: #2C2520;       /* rich dark brown */
+      --accent: #B8860B;          /* dark goldenrod – earthy gold */
+      --accent-dark: #8B6508;     /* deeper gold */
+      --text: #F5F0E6;            /* warm off-white */
+      --text-light: #E0D6C8;      /* light beige */
+      --text-muted: #B8AA99;      /* muted sand */
+      --border: rgba(245, 240, 230, 0.1);
+      --card-bg: rgba(44, 37, 32, 0.9);  /* semi-transparent secondary */
       --transition: all 0.3s ease;
-      --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       --radius: 8px;
     }
     
@@ -62,7 +63,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(10, 10, 10, 0.95);
+      background: rgba(30, 26, 23, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 18px 0;
@@ -141,7 +142,7 @@
     .hero {
       padding: 180px 0 100px;
       text-align: center;
-      background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9));
+      background: linear-gradient(rgba(30, 26, 23, 0.95), rgba(30, 26, 23, 0.95));
       position: relative;
       overflow: hidden;
     }
@@ -154,8 +155,8 @@
       width: 100%;
       height: 100%;
       background: 
-        radial-gradient(circle at 20% 30%, rgba(29, 185, 84, 0.1) 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(29, 185, 84, 0.05) 0%, transparent 30%);
+        radial-gradient(circle at 20% 30%, rgba(184, 134, 11, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.05) 0%, transparent 30%);
       z-index: 1;
     }
     
@@ -216,12 +217,12 @@
     .btn-primary {
       background: var(--accent);
       color: white;
-      box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
     }
     
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
       color: white;
     }
     
@@ -235,7 +236,7 @@
       background: var(--accent);
       color: var(--primary);
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.2);
     }
     
     /* Sections */
@@ -327,7 +328,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at top right, rgba(29, 185, 84, 0.05) 0%, transparent 70%);
+      background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.05) 0%, transparent 70%);
       z-index: 0;
     }
     
@@ -441,7 +442,7 @@
     
     .artist-social a:hover {
       transform: translateY(-3px) scale(1.1);
-      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
     }
     
     .artist-info {
@@ -466,12 +467,12 @@
     .artist-genre {
       display: inline-block;
       padding: 5px 15px;
-      background: rgba(29, 185, 84, 0.1);
+      background: rgba(184, 134, 11, 0.1);
       color: var(--accent);
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 600;
-      border: 1px solid rgba(29, 185, 84, 0.2);
+      border: 1px solid rgba(184, 134, 11, 0.2);
     }
     
     /* Releases Section */
@@ -526,7 +527,7 @@
     
     /* Footer */
     footer {
-      background: rgba(10, 10, 10, 0.95);
+      background: rgba(30, 26, 23, 0.95);
       color: var(--text);
       padding: 60px 0 30px;
       text-align: center;
@@ -728,11 +729,11 @@
     .slide-genre {
       display: inline-block;
       padding: 8px 20px;
-      background: rgba(29, 185, 84, 0.1);
+      background: rgba(184, 134, 11, 0.1);
       color: var(--accent);
       border-radius: 20px;
       font-weight: 600;
-      border: 1px solid rgba(29, 185, 84, 0.2);
+      border: 1px solid rgba(184, 134, 11, 0.2);
       margin-bottom: 25px;
       font-size: 0.85rem;
     }
@@ -761,7 +762,7 @@
     
     .slider-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
     }
     
     .slider-dots {
@@ -800,12 +801,12 @@
       align-items: center;
       justify-content: center;
       transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
     }
     
     .youtube-icon a:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
     }
     
     .youtube-icon i {
@@ -818,7 +819,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin: 40px 0;
+      margin: 40px 0 20px;
     }
     
     .contact-icon {
@@ -840,12 +841,12 @@
       color: white;
       font-size: 26px;
       transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
     }
     
     .contact-icon a:hover {
       transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
     }
     
     .contact-icon span {
@@ -872,12 +873,12 @@
       color: white;
       font-size: 18px;
       transition: var(--transition);
-      box-shadow: 0 3px 10px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 3px 10px rgba(184, 134, 11, 0.2);
     }
     
     .icon-only a:hover {
       transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+      box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
     }
 
     /* Music Platforms Section */
@@ -930,7 +931,7 @@
     
     .platform-btn:hover {
       transform: scale(1.03);
-      box-shadow: 0 4px 10px rgba(29, 185, 84, 0.2);
+      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.2);
     }
     
     /* Mission Statement */
@@ -955,6 +956,36 @@
       color: var(--text-muted);
       line-height: 1.8;
       text-align: center;
+    }
+    
+    /* MWM credit */
+    .mwm-credit {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .mwm-credit a {
+      color: var(--accent);
+      font-weight: 600;
+      border-bottom: 1px dotted var(--accent);
+    }
+    .mwm-credit a:hover {
+      color: var(--text-light);
+      border-bottom-color: var(--text-light);
+    }
+    
+    /* Contact text details */
+    .contact-details {
+      margin: 20px 0 10px;
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+    .contact-details p {
+      margin: 8px 0;
+    }
+    .contact-details i {
+      color: var(--accent);
+      width: 30px;
     }
   </style>
 </head>
@@ -1072,19 +1103,20 @@
       </div>
     </section>
 
+    <!-- Latest Releases (only Dead Souls EP) -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Latest Releases</h2>
+        <h2 class="section-title">Latest Release</h2>
         
         <div class="release-card">
-          <img src="19.png" alt="World Of Drum Tech EP" class="release-image">
+          <img src="20.jpg" alt="Dead Souls EP" class="release-image">
           <div class="release-info">
-            <h3 class="release-title">World Of Drum Tech EP</h3>
+            <h3 class="release-title">Dead Souls EP</h3>
             <p class="release-description">
-              "World Of Drum Tech EP" by DoskiWaAfrika is a powerful Afro House journey that fuses deep tribal rhythms, soulful melodies, and modern electronic grooves. Released on his birthday, this EP celebrates life, culture, and the spiritual connection between drums and dance. Each track captures the pulse of Africa, blending tradition with innovation to create a timeless, high-energy sound that moves both the body and the soul.
+              Dead Souls is a hypnotic journey into the primal heartbeat of the earth from visionary artist DeADip. This EP fuses raw tribal rhythms, ancient chants, and ritualistic drumming with modern electronic textures, creating a sound that feels both ancestral and otherworldly. Each track pulses with the energy of ceremonial fires and the haunting echoes of spirits long forgotten.
             </p>
             <div class="release-links">
-              <a href="https://www.mediafire.com/file/db84bk7i91usuei/DoskiWaAfrika_-_World_Of_Drum_Tech_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
+              <a href="https://www.mediafire.com/file/gaouocfkczth8d5/DeADip_-_Dead_Souls_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
             </div>
           </div>
         </div>
@@ -1096,7 +1128,7 @@
     </section>
   </div>
 
-  <!-- About Page -->
+  <!-- About Page (unchanged except colors) -->
   <div id="about" class="page-content">
     <section class="section">
       <div class="container">
@@ -1136,7 +1168,7 @@
     </section>
   </div>
 
-  <!-- Artists Page -->
+  <!-- Artists Page (unchanged) -->
   <div id="artists" class="page-content">
     <section class="section">
       <div class="container">
@@ -1182,7 +1214,7 @@
     </section>
   </div>
 
-  <!-- Releases Page -->
+  <!-- Releases Page (added Dead Souls EP, shortened other descriptions) -->
   <div id="releases" class="page-content">
     <section class="section">
       <div class="container">
@@ -1219,13 +1251,28 @@
             <a href="https://volumo.com/label/849271-nlm-music-group-africa" class="platform-btn" target="_blank">Listen</a>
           </div>
         </div>
+
+        <!-- Dead Souls EP (new) -->
+        <div class="release-card">
+          <img src="20.jpg" alt="Dead Souls EP" class="release-image">
+          <div class="release-info">
+            <h3 class="release-title">Dead Souls EP</h3>
+            <p class="release-description">
+              Dead Souls is a hypnotic journey into the primal heartbeat of the earth from visionary artist DeADip. This EP fuses raw tribal rhythms, ancient chants, and ritualistic drumming with modern electronic textures, creating a sound that feels both ancestral and otherworldly. Each track pulses with the energy of ceremonial fires and the haunting echoes of spirits long forgotten.
+            </p>
+            <div class="release-links">
+              <a href="https://www.mediafire.com/file/gaouocfkczth8d5/DeADip_-_Dead_Souls_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
+            </div>
+          </div>
+        </div>
         
+        <!-- existing releases with shortened descriptions -->
         <div class="release-card">
           <img src="19.png" alt="World Of Drum Tech EP" class="release-image">
           <div class="release-info">
             <h3 class="release-title">World Of Drum Tech EP</h3>
             <p class="release-description">
-              "World Of Drum Tech EP" by DoskiWaAfrika is a powerful Afro House journey that fuses deep tribal rhythms, soulful melodies, and modern electronic grooves. Released on his birthday, this EP celebrates life, culture, and the spiritual connection between drums and dance. Each track captures the pulse of Africa, blending tradition with innovation to create a timeless, high-energy sound that moves both the body and the soul.
+              DoskiWaAfrika's Afro House journey fusing deep tribal rhythms, soulful melodies, and modern electronic grooves. Released on his birthday, this EP celebrates life, culture, and the spiritual connection between drums and dance. A timeless, high-energy sound.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/db84bk7i91usuei/DoskiWaAfrika_-_World_Of_Drum_Tech_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
@@ -1238,7 +1285,7 @@
           <div class="release-info">
             <h3 class="release-title">From The Archives EP</h3>
             <p class="release-description">
-              Every artist has a vault of memories, sketches, and unfinished stories. For IM MusiQ & De_Addict, that vault held a collection of deep house rhythms waiting for their moment. 'From The Archives' is the key. This EP unlocks a portal to the past, reviving the soulful grooves and hypnotic basslines that were once shelved. It's more than a release; it's a resurrection of a feeling, a chance for these lost tracks to finally find their home in the present.
+              IM MusiQ & De_Addict unlock deep house rhythms from the vault. 'From The Archives' revives soulful grooves and hypnotic basslines — a resurrection of lost tracks finally finding their home.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/vclkulaq76ihzzj/I%2527M_MusiQ_%2526_De_Addict_-_From_The_Archives_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
@@ -1251,7 +1298,7 @@
           <div class="release-info">
             <h3 class="release-title">Confidence EP</h3>
             <p class="release-description">
-              Confidence is a vibrant Afro House EP by DoskiWaAfrika, blending pulsating rhythms, rich African melodies, and uplifting energy. Each track is a celebration of self-assurance, cultural pride, and infectious dancefloor vibes. From deep basslines to hypnotic percussions, this EP embodies the spirit of resilience and joy.
+              DoskiWaAfrika's vibrant Afro House EP blending pulsating rhythms, rich African melodies, and uplifting energy. A celebration of self-assurance and cultural pride.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/pzx5lnxfitqf0au/DoskiWaAfrika_-_Confidence_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
@@ -1264,7 +1311,7 @@
           <div class="release-info">
             <h3 class="release-title">From The Street To The World EP</h3>
             <p class="release-description">
-              From The Street To The World is more than a title; its the mission statement for T.fly deDeejay's powerful new EP. This collection of tracks charts a course from the foundational, dusty rhythms of the street—where Afro House's percussive heartbeat reigns—to the vast, expansive horizons of the world stage.
+              T.fly deDeejay's mission: from dusty street rhythms to global stages. Afro House percussions meet expansive horizons. Raw, authentic, unstoppable.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/0hyerk0iaktw1lf/T.fly_deDeejay_-_From_Street_To_The_World_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
@@ -1277,7 +1324,7 @@
           <div class="release-info">
             <h3 class="release-title">Oracle Voltage Album</h3>
             <p class="release-description">
-              Step into the future of sound with I'M MusiQ's highly anticipated album, Oracle Voltage—a groundbreaking fusion of EDM's electrifying energy and Amapiano's hypnotic rhythms. This visionary project blends pulsating synths, deep basslines, and soulful piano melodies.
+              I'M MusiQ's groundbreaking fusion of EDM's electrifying energy and Amapiano's hypnotic rhythms. Pulsating synths, deep basslines, and soulful piano melodies.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/d17s3sj4peh5ic5/I%2527M_MusiQ_-_Oracle_Voltage_Album.zip/file" class="btn btn-primary" target="_blank">Download Album</a>
@@ -1290,7 +1337,7 @@
           <div class="release-info">
             <h3 class="release-title">Evil Eye EP</h3>
             <p class="release-description">
-              A 6-track EP that merges the rich rhythms of Afro House with the deep, rolling basslines of Tech. Built for the dancefloor, it's a hypnotic journey—where percussive grooves meet dark, driving energy. Tight, powerful, and relentlessly rhythmic, this project showcases DoskiWaAfrika's signature sound.
+              DoskiWaAfrika's 6-track EP merging Afro House with deep Tech basslines. Hypnotic percussive grooves with dark, driving energy. Relentlessly rhythmic.
             </p>
             <div class="release-links">
               <a href="https://www.mediafire.com/file/huacucugcqqmr77/DoskiWaAfrika_-_Evil_Eeye_EP.zip/file" class="btn btn-primary" target="_blank">Download EP</a>
@@ -1301,7 +1348,7 @@
     </section>
   </div>
 
-  <!-- Contact Page -->
+  <!-- Contact Page (with email & phone written) -->
   <div id="contact" class="page-content">
     <section class="section">
       <div class="container">
@@ -1333,6 +1380,12 @@
               <span>Call Us</span>
             </div>
           </div>
+
+          <!-- written contact details -->
+          <div class="contact-details">
+            <p><i class="far fa-envelope"></i> officialnlmmusicgroupafrica@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> 0813398293</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1356,7 +1409,11 @@
         <a href="https://www.traxsource.com/label/75069/nlm-music-group-africa" target="_blank"><i class="fas fa-compact-disc"></i></a>
         <a href="https://volumo.com/label/849271-nlm-music-group-africa" target="_blank"><i class="fas fa-headphones"></i></a>
       </div>
-      <p style="margin-top: 30px; color: var(--text-muted); font-size: 0.8rem;">
+      <!-- MWM Technologies credit -->
+      <div class="mwm-credit">
+        Created By <a href="https://www.mwmtechnologies.co.za/" target="_blank">MWM Technologies</a>
+      </div>
+      <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.8rem;">
         &copy; 2025 NLM Music Group Africa. All rights reserved.
       </p>
     </div>
